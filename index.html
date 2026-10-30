@@ -1,0 +1,2564 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head><style id="bundled-dashboard-css">/*! tailwindcss v4.1.10 | MIT License | https://tailwindcss.com */
+@layer properties;
+:root, :host {
+  --font-sans: Inter,system-ui,sans-serif;
+  --font-serif: Newsreader,Georgia,serif;
+  --font-mono: JetBrains Mono,monospace;
+  --color-amber-50: oklch(98.7% 0.022 95.277);
+  --color-amber-200: oklch(92.4% 0.12 95.746);
+  --color-amber-400: oklch(82.8% 0.189 84.429);
+  --color-amber-500: oklch(76.9% 0.188 70.08);
+  --color-amber-700: oklch(55.5% 0.163 48.998);
+  --color-amber-800: oklch(47.3% 0.137 46.201);
+  --color-amber-900: oklch(41.4% 0.112 45.904);
+  --color-emerald-50: oklch(97.9% 0.021 166.113);
+  --color-emerald-100: oklch(95% 0.052 163.051);
+  --color-emerald-200: oklch(90.5% 0.093 164.15);
+  --color-emerald-300: oklch(84.5% 0.143 164.978);
+  --color-emerald-400: oklch(76.5% 0.177 163.223);
+  --color-emerald-500: oklch(69.6% 0.17 162.48);
+  --color-emerald-600: oklch(59.6% 0.145 163.225);
+  --color-emerald-700: oklch(50.8% 0.118 165.612);
+  --color-emerald-800: oklch(43.2% 0.095 166.913);
+  --color-emerald-900: oklch(37.8% 0.077 168.94);
+  --color-emerald-950: oklch(26.2% 0.051 172.552);
+  --color-teal-500: oklch(70.4% 0.14 182.503);
+  --color-teal-900: oklch(38.6% 0.063 188.416);
+  --color-sky-500: oklch(68.5% 0.169 237.323);
+  --color-blue-600: oklch(54.6% 0.245 262.881);
+  --color-pink-500: oklch(65.6% 0.241 354.308);
+  --color-pink-800: oklch(45.9% 0.187 3.815);
+  --color-rose-50: oklch(96.9% 0.015 12.422);
+  --color-rose-200: oklch(89.2% 0.058 10.001);
+  --color-rose-500: oklch(64.5% 0.246 16.439);
+  --color-rose-700: oklch(51.4% 0.222 16.935);
+  --color-rose-800: oklch(45.5% 0.188 13.697);
+  --color-rose-900: oklch(41% 0.159 10.272);
+  --color-slate-500: oklch(55.4% 0.046 257.417);
+  --color-slate-600: oklch(44.6% 0.043 257.281);
+  --color-slate-700: oklch(37.2% 0.044 257.287);
+  --color-white: #fff;
+  --spacing: 0.25rem;
+  --container-xs: 20rem;
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-7xl: 80rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: calc(1 / 0.75);
+  --text-sm: 0.875rem;
+  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-base: 1rem;
+  --text-base--line-height: calc(1.5 / 1);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: calc(2.25 / 1.875);
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --tracking-tight: -0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-relaxed: 1.625;
+  --radius-sm: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --default-font-family: var(--font-sans);
+  --default-mono-font-family: var(--font-mono);
+  --color-forest-50: #f2f7f4;
+  --color-forest-100: #dfede5;
+  --color-forest-200: #c0dccd;
+  --color-forest-300: #95c3ac;
+  --color-forest-500: #428769;
+  --color-forest-600: #306c53;
+  --color-forest-700: #275643;
+  --color-forest-800: #1f4536;
+  --color-forest-900: #143628;
+  --color-forest-950: #0b1e16;
+  --color-sand-50: #faf9f5;
+  --color-sand-100: #f3f0e6;
+  --color-sand-200: #e6e0cc;
+  --color-sand-300: #d5caa8;
+  --color-terracotta-600: #b04822;
+}
+*, ::after, ::before, ::backdrop, ::file-selector-button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+html, :host {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+  font-feature-settings: var(--default-font-feature-settings, normal);
+  font-variation-settings: var(--default-font-variation-settings, normal);
+  -webkit-tap-highlight-color: transparent;
+}
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+a {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+b, strong {
+  font-weight: bolder;
+}
+code, kbd, samp, pre {
+  font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+  font-feature-settings: var(--default-mono-font-feature-settings, normal);
+  font-variation-settings: var(--default-mono-font-variation-settings, normal);
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+:-moz-focusring {
+  outline: auto;
+}
+progress {
+  vertical-align: baseline;
+}
+summary {
+  display: list-item;
+}
+ol, ul, menu {
+  list-style: none;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+button, input, select, optgroup, textarea, ::file-selector-button {
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  border-radius: 0;
+  background-color: transparent;
+  opacity: 1;
+}
+:where(select:is([multiple], [size])) optgroup {
+  font-weight: bolder;
+}
+:where(select:is([multiple], [size])) optgroup option {
+  padding-inline-start: 20px;
+}
+::file-selector-button {
+  margin-inline-end: 4px;
+}
+::placeholder {
+  opacity: 1;
+}
+@supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+  ::placeholder {
+    color: currentcolor;
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, currentcolor 50%, transparent);
+    }
+  }
+}
+textarea {
+  resize: vertical;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-date-and-time-value {
+  min-height: 1lh;
+  text-align: inherit;
+}
+::-webkit-datetime-edit {
+  display: inline-flex;
+}
+::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+  padding-block: 0;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+  appearance: button;
+}
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+[hidden]:where(:not([hidden='until-found'])) {
+  display: none !important;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.sticky {
+  position: sticky;
+}
+.top-0 {
+  top: calc(var(--spacing) * 0);
+}
+.right-5 {
+  right: calc(var(--spacing) * 5);
+}
+.bottom-5 {
+  bottom: calc(var(--spacing) * 5);
+}
+.z-10 {
+  z-index: 10;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.my-4 {
+  margin-block: calc(var(--spacing) * 4);
+}
+.mt-0\.5 {
+  margin-top: calc(var(--spacing) * 0.5);
+}
+.mt-1 {
+  margin-top: calc(var(--spacing) * 1);
+}
+.mt-1\.5 {
+  margin-top: calc(var(--spacing) * 1.5);
+}
+.mt-2 {
+  margin-top: calc(var(--spacing) * 2);
+}
+.mt-2\.5 {
+  margin-top: calc(var(--spacing) * 2.5);
+}
+.mt-3 {
+  margin-top: calc(var(--spacing) * 3);
+}
+.mt-4 {
+  margin-top: calc(var(--spacing) * 4);
+}
+.mt-6 {
+  margin-top: calc(var(--spacing) * 6);
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mr-1 {
+  margin-right: calc(var(--spacing) * 1);
+}
+.mb-1 {
+  margin-bottom: calc(var(--spacing) * 1);
+}
+.mb-2 {
+  margin-bottom: calc(var(--spacing) * 2);
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.h-1\.5 {
+  height: calc(var(--spacing) * 1.5);
+}
+.h-2 {
+  height: calc(var(--spacing) * 2);
+}
+.h-2\.5 {
+  height: calc(var(--spacing) * 2.5);
+}
+.h-3 {
+  height: calc(var(--spacing) * 3);
+}
+.h-6 {
+  height: calc(var(--spacing) * 6);
+}
+.h-10 {
+  height: calc(var(--spacing) * 10);
+}
+.h-60 {
+  height: calc(var(--spacing) * 60);
+}
+.h-64 {
+  height: calc(var(--spacing) * 64);
+}
+.h-auto {
+  height: auto;
+}
+.max-h-\[480px\] {
+  max-height: 480px;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.w-2 {
+  width: calc(var(--spacing) * 2);
+}
+.w-2\.5 {
+  width: calc(var(--spacing) * 2.5);
+}
+.w-3 {
+  width: calc(var(--spacing) * 3);
+}
+.w-4 {
+  width: calc(var(--spacing) * 4);
+}
+.w-6 {
+  width: calc(var(--spacing) * 6);
+}
+.w-10 {
+  width: calc(var(--spacing) * 10);
+}
+.w-12 {
+  width: calc(var(--spacing) * 12);
+}
+.w-full {
+  width: 100%;
+}
+.max-w-3xl {
+  max-width: var(--container-3xl);
+}
+.max-w-4xl {
+  max-width: var(--container-4xl);
+}
+.max-w-7xl {
+  max-width: var(--container-7xl);
+}
+.max-w-xs {
+  max-width: var(--container-xs);
+}
+.min-w-\[780px\] {
+  min-width: 780px;
+}
+.flex-1 {
+  flex: 1;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.border-collapse {
+  border-collapse: collapse;
+}
+.cursor-default {
+  cursor: default;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.items-center {
+  align-items: center;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-1 {
+  gap: calc(var(--spacing) * 1);
+}
+.gap-1\.5 {
+  gap: calc(var(--spacing) * 1.5);
+}
+.gap-2 {
+  gap: calc(var(--spacing) * 2);
+}
+.gap-2\.5 {
+  gap: calc(var(--spacing) * 2.5);
+}
+.gap-3 {
+  gap: calc(var(--spacing) * 3);
+}
+.gap-3\.5 {
+  gap: calc(var(--spacing) * 3.5);
+}
+.gap-4 {
+  gap: calc(var(--spacing) * 4);
+}
+.gap-5 {
+  gap: calc(var(--spacing) * 5);
+}
+.gap-6 {
+  gap: calc(var(--spacing) * 6);
+}
+.space-y-2 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-2\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-4 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-6 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.divide-y {
+  :where(& > :not(:last-child)) {
+    --tw-divide-y-reverse: 0;
+    border-bottom-style: var(--tw-border-style);
+    border-top-style: var(--tw-border-style);
+    border-top-width: calc(1px * var(--tw-divide-y-reverse));
+    border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  }
+}
+.divide-sand-200 {
+  :where(& > :not(:last-child)) {
+    border-color: var(--color-sand-200);
+  }
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-2xl {
+  border-radius: var(--radius-2xl);
+}
+.rounded-full {
+  border-radius: calc(infinity * 1px);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+.border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.border-t {
+  border-top-style: var(--tw-border-style);
+  border-top-width: 1px;
+}
+.border-b {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+}
+.border-l-2 {
+  border-left-style: var(--tw-border-style);
+  border-left-width: 2px;
+}
+.border-amber-200 {
+  border-color: var(--color-amber-200);
+}
+.border-amber-400\/30 {
+  border-color: color-mix(in srgb, oklch(82.8% 0.189 84.429) 30%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-amber-400) 30%, transparent);
+  }
+}
+.border-amber-500 {
+  border-color: var(--color-amber-500);
+}
+.border-emerald-200 {
+  border-color: var(--color-emerald-200);
+}
+.border-emerald-200\/80 {
+  border-color: color-mix(in srgb, oklch(90.5% 0.093 164.15) 80%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-emerald-200) 80%, transparent);
+  }
+}
+.border-emerald-600\/40 {
+  border-color: color-mix(in srgb, oklch(59.6% 0.145 163.225) 40%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-emerald-600) 40%, transparent);
+  }
+}
+.border-emerald-950 {
+  border-color: var(--color-emerald-950);
+}
+.border-forest-500 {
+  border-color: var(--color-forest-500);
+}
+.border-forest-600 {
+  border-color: var(--color-forest-600);
+}
+.border-forest-700 {
+  border-color: var(--color-forest-700);
+}
+.border-forest-800 {
+  border-color: var(--color-forest-800);
+}
+.border-forest-800\/80 {
+  border-color: color-mix(in srgb, #1f4536 80%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-forest-800) 80%, transparent);
+  }
+}
+.border-pink-800 {
+  border-color: var(--color-pink-800);
+}
+.border-rose-200 {
+  border-color: var(--color-rose-200);
+}
+.border-sand-200 {
+  border-color: var(--color-sand-200);
+}
+.border-sand-300 {
+  border-color: var(--color-sand-300);
+}
+.border-teal-900 {
+  border-color: var(--color-teal-900);
+}
+.bg-\[\#f4f3ee\] {
+  background-color: #f4f3ee;
+}
+.bg-amber-50\/70 {
+  background-color: color-mix(in srgb, oklch(98.7% 0.022 95.277) 70%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-amber-50) 70%, transparent);
+  }
+}
+.bg-amber-500\/20 {
+  background-color: color-mix(in srgb, oklch(76.9% 0.188 70.08) 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-amber-500) 20%, transparent);
+  }
+}
+.bg-blue-600 {
+  background-color: var(--color-blue-600);
+}
+.bg-emerald-50\/70 {
+  background-color: color-mix(in srgb, oklch(97.9% 0.021 166.113) 70%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-emerald-50) 70%, transparent);
+  }
+}
+.bg-emerald-100 {
+  background-color: var(--color-emerald-100);
+}
+.bg-emerald-400 {
+  background-color: var(--color-emerald-400);
+}
+.bg-emerald-600 {
+  background-color: var(--color-emerald-600);
+}
+.bg-emerald-700 {
+  background-color: var(--color-emerald-700);
+}
+.bg-emerald-800\/80 {
+  background-color: color-mix(in srgb, oklch(43.2% 0.095 166.913) 80%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-emerald-800) 80%, transparent);
+  }
+}
+.bg-forest-700 {
+  background-color: var(--color-forest-700);
+}
+.bg-forest-800 {
+  background-color: var(--color-forest-800);
+}
+.bg-forest-900 {
+  background-color: var(--color-forest-900);
+}
+.bg-forest-950 {
+  background-color: var(--color-forest-950);
+}
+.bg-pink-500 {
+  background-color: var(--color-pink-500);
+}
+.bg-rose-50\/70 {
+  background-color: color-mix(in srgb, oklch(96.9% 0.015 12.422) 70%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-rose-50) 70%, transparent);
+  }
+}
+.bg-rose-500\/70 {
+  background-color: color-mix(in srgb, oklch(64.5% 0.246 16.439) 70%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-rose-500) 70%, transparent);
+  }
+}
+.bg-sand-50 {
+  background-color: var(--color-sand-50);
+}
+.bg-sand-100 {
+  background-color: var(--color-sand-100);
+}
+.bg-sky-500 {
+  background-color: var(--color-sky-500);
+}
+.bg-teal-500 {
+  background-color: var(--color-teal-500);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+.p-2\.5 {
+  padding: calc(var(--spacing) * 2.5);
+}
+.p-3 {
+  padding: calc(var(--spacing) * 3);
+}
+.p-4 {
+  padding: calc(var(--spacing) * 4);
+}
+.p-5 {
+  padding: calc(var(--spacing) * 5);
+}
+.p-6 {
+  padding: calc(var(--spacing) * 6);
+}
+.px-1 {
+  padding-inline: calc(var(--spacing) * 1);
+}
+.px-1\.5 {
+  padding-inline: calc(var(--spacing) * 1.5);
+}
+.px-2 {
+  padding-inline: calc(var(--spacing) * 2);
+}
+.px-2\.5 {
+  padding-inline: calc(var(--spacing) * 2.5);
+}
+.px-3 {
+  padding-inline: calc(var(--spacing) * 3);
+}
+.px-3\.5 {
+  padding-inline: calc(var(--spacing) * 3.5);
+}
+.px-4 {
+  padding-inline: calc(var(--spacing) * 4);
+}
+.py-0\.5 {
+  padding-block: calc(var(--spacing) * 0.5);
+}
+.py-1 {
+  padding-block: calc(var(--spacing) * 1);
+}
+.py-1\.5 {
+  padding-block: calc(var(--spacing) * 1.5);
+}
+.py-2 {
+  padding-block: calc(var(--spacing) * 2);
+}
+.py-2\.5 {
+  padding-block: calc(var(--spacing) * 2.5);
+}
+.py-3 {
+  padding-block: calc(var(--spacing) * 3);
+}
+.py-4 {
+  padding-block: calc(var(--spacing) * 4);
+}
+.py-5 {
+  padding-block: calc(var(--spacing) * 5);
+}
+.py-6 {
+  padding-block: calc(var(--spacing) * 6);
+}
+.pt-2 {
+  padding-top: calc(var(--spacing) * 2);
+}
+.pt-3 {
+  padding-top: calc(var(--spacing) * 3);
+}
+.pt-4 {
+  padding-top: calc(var(--spacing) * 4);
+}
+.pr-8 {
+  padding-right: calc(var(--spacing) * 8);
+}
+.pb-1 {
+  padding-bottom: calc(var(--spacing) * 1);
+}
+.pb-2\.5 {
+  padding-bottom: calc(var(--spacing) * 2.5);
+}
+.pb-4 {
+  padding-bottom: calc(var(--spacing) * 4);
+}
+.pl-3 {
+  padding-left: calc(var(--spacing) * 3);
+}
+.pl-4 {
+  padding-left: calc(var(--spacing) * 4);
+}
+.pl-5 {
+  padding-left: calc(var(--spacing) * 5);
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+.font-serif {
+  font-family: var(--font-serif);
+}
+.text-2xl {
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+}
+.text-base {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+}
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
+}
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+}
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+}
+.text-xs {
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+}
+.text-\[11px\] {
+  font-size: 11px;
+}
+.leading-relaxed {
+  --tw-leading: var(--leading-relaxed);
+  line-height: var(--leading-relaxed);
+}
+.leading-snug {
+  --tw-leading: var(--leading-snug);
+  line-height: var(--leading-snug);
+}
+.leading-tight {
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
+}
+.font-bold {
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+.font-extrabold {
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+}
+.font-medium {
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+}
+.font-semibold {
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+}
+.tracking-\[0\.17em\] {
+  --tw-tracking: 0.17em;
+  letter-spacing: 0.17em;
+}
+.tracking-tight {
+  --tw-tracking: var(--tracking-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.tracking-wider {
+  --tw-tracking: var(--tracking-wider);
+  letter-spacing: var(--tracking-wider);
+}
+.tracking-widest {
+  --tw-tracking: var(--tracking-widest);
+  letter-spacing: var(--tracking-widest);
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.text-amber-200 {
+  color: var(--color-amber-200);
+}
+.text-amber-700 {
+  color: var(--color-amber-700);
+}
+.text-amber-800 {
+  color: var(--color-amber-800);
+}
+.text-amber-900 {
+  color: var(--color-amber-900);
+}
+.text-emerald-100 {
+  color: var(--color-emerald-100);
+}
+.text-emerald-200 {
+  color: var(--color-emerald-200);
+}
+.text-emerald-300 {
+  color: var(--color-emerald-300);
+}
+.text-emerald-700 {
+  color: var(--color-emerald-700);
+}
+.text-emerald-800 {
+  color: var(--color-emerald-800);
+}
+.text-emerald-900 {
+  color: var(--color-emerald-900);
+}
+.text-forest-50 {
+  color: var(--color-forest-50);
+}
+.text-forest-100 {
+  color: var(--color-forest-100);
+}
+.text-forest-100\/80 {
+  color: color-mix(in srgb, #dfede5 80%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--color-forest-100) 80%, transparent);
+  }
+}
+.text-forest-200 {
+  color: var(--color-forest-200);
+}
+.text-forest-300 {
+  color: var(--color-forest-300);
+}
+.text-forest-700 {
+  color: var(--color-forest-700);
+}
+.text-forest-800 {
+  color: var(--color-forest-800);
+}
+.text-forest-900 {
+  color: var(--color-forest-900);
+}
+.text-forest-950 {
+  color: var(--color-forest-950);
+}
+.text-rose-700 {
+  color: var(--color-rose-700);
+}
+.text-rose-800 {
+  color: var(--color-rose-800);
+}
+.text-rose-900 {
+  color: var(--color-rose-900);
+}
+.text-slate-500 {
+  color: var(--color-slate-500);
+}
+.text-slate-600 {
+  color: var(--color-slate-600);
+}
+.text-slate-700 {
+  color: var(--color-slate-700);
+}
+.text-terracotta-600 {
+  color: var(--color-terracotta-600);
+}
+.text-white {
+  color: var(--color-white);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.opacity-75 {
+  opacity: 75%;
+}
+.shadow-inner {
+  --tw-shadow: inset 0 2px 4px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-sm {
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.transition {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.select-none {
+  -webkit-user-select: none;
+  user-select: none;
+}
+.selection\:bg-forest-200 {
+  & *::selection {
+    background-color: var(--color-forest-200);
+  }
+  &::selection {
+    background-color: var(--color-forest-200);
+  }
+}
+.selection\:text-forest-950 {
+  & *::selection {
+    color: var(--color-forest-950);
+  }
+  &::selection {
+    color: var(--color-forest-950);
+  }
+}
+.hover\:bg-emerald-500 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-emerald-500);
+    }
+  }
+}
+.hover\:bg-forest-700 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-forest-700);
+    }
+  }
+}
+.hover\:bg-forest-800 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-forest-800);
+    }
+  }
+}
+.hover\:bg-sand-50\/80 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in srgb, #faf9f5 80%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-sand-50) 80%, transparent);
+      }
+    }
+  }
+}
+.hover\:bg-sand-100 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-sand-100);
+    }
+  }
+}
+.hover\:text-white {
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+}
+.focus\:border-forest-700 {
+  &:focus {
+    border-color: var(--color-forest-700);
+  }
+}
+.focus\:ring-forest-600 {
+  &:focus {
+    --tw-ring-color: var(--color-forest-600);
+  }
+}
+.focus\:outline-none {
+  &:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+}
+.sm\:grid-cols-4 {
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.sm\:grid-cols-5 {
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+.sm\:flex-row {
+  @media (width >= 40rem) {
+    flex-direction: row;
+  }
+}
+.sm\:items-center {
+  @media (width >= 40rem) {
+    align-items: center;
+  }
+}
+.sm\:px-6 {
+  @media (width >= 40rem) {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+}
+.sm\:text-3xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+}
+.sm\:text-lg {
+  @media (width >= 40rem) {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+}
+.sm\:text-sm {
+  @media (width >= 40rem) {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+}
+.sm\:text-xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+}
+.md\:grid-cols-3 {
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.lg\:col-span-4 {
+  @media (width >= 64rem) {
+    grid-column: span 4 / span 4;
+  }
+}
+.lg\:col-span-5 {
+  @media (width >= 64rem) {
+    grid-column: span 5 / span 5;
+  }
+}
+.lg\:col-span-7 {
+  @media (width >= 64rem) {
+    grid-column: span 7 / span 7;
+  }
+}
+.lg\:col-span-8 {
+  @media (width >= 64rem) {
+    grid-column: span 8 / span 8;
+  }
+}
+.lg\:grid-cols-2 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.lg\:grid-cols-4 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.lg\:grid-cols-12 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+.lg\:flex-row {
+  @media (width >= 64rem) {
+    flex-direction: row;
+  }
+}
+.lg\:items-center {
+  @media (width >= 64rem) {
+    align-items: center;
+  }
+}
+.lg\:items-end {
+  @media (width >= 64rem) {
+    align-items: flex-end;
+  }
+}
+.lg\:px-8 {
+  @media (width >= 64rem) {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+}
+.xl\:flex-row {
+  @media (width >= 80rem) {
+    flex-direction: row;
+  }
+}
+.xl\:items-center {
+  @media (width >= 80rem) {
+    align-items: center;
+  }
+}
+.xl\:justify-between {
+  @media (width >= 80rem) {
+    justify-content: space-between;
+  }
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-divide-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
+      --tw-divide-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+    }
+  }
+}
+</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beyond Green Cover | AMU Corridor Study</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<style>
+    body {
+      background-color: #faf9f5;
+      color: #1c2822;
+      overflow-x: hidden;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f3f0e6;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #95c3ac;
+      border-radius: 3px;
+    }
+    .tree-node {
+      transition: transform 0.2s ease, filter 0.2s ease;
+      cursor: pointer;
+    }
+    .tree-node:hover {
+      transform: scale(1.25);
+      filter: drop-shadow(0 4px 8px rgba(20, 54, 40, 0.35));
+    }
+    .tree-node.selected-node {
+      stroke: #c85a32 !important;
+      stroke-width: 3px !important;
+      filter: drop-shadow(0 0 10px rgba(200, 90, 50, 0.75));
+    }
+    .stretch-pill.active, .view-mode-btn.active, .sheet-pill.active {
+      background-color: #143628;
+      color: #ffffff;
+      border-color: #143628;
+    }
+    .tab-btn.active {
+      background-color: #143628;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(20, 54, 40, 0.18);
+    }
+  </style>
+<style>
+  html { scroll-padding-top: 118px; }
+  body { background: #f8f8f4; }
+  .tab-btn.active { background: #e6f0e8 !important; color: #143628 !important; box-shadow: none !important; }
+  .tree-node:focus-visible { outline: 2px solid #c85a32; }
+  .tab-panel { animation: rise-in .18s ease-out; }
+  @keyframes rise-in { from {opacity:.74; transform:translateY(4px)} to{opacity:1; transform:translateY(0)} }
+  @media print { header { position:static !important; } button, .no-print { display:none !important;} .tab-panel {display:block !important;} body {background:white !important;} }
+</style><style>html{scroll-behavior:smooth}body{background:#faf9f5;color:#1c2822;font-family:Inter,system-ui,sans-serif}canvas{max-width:100%}select:disabled,input:disabled{cursor:default}#tab-methods p{max-width:100%}</style><style id="presentation-polish">#vectorAndInspectorGrid{align-items:start}#vectorAndInspectorGrid>div:first-child{align-self:start}.tab-panel .rounded-2xl{overflow-wrap:anywhere}#corridorSvg{display:block}</style><style id="academic-editorial-style">
+:root{--ink:#242e27;--muted:#66746c;--line:#d9dfd9;--green:#405e4d;--olive:#80856a;--olive-light:#f1f3ea;--paper:#fff;--wash:#f7f8f5}
+html{scroll-behavior:smooth} body{margin:0;background:#f8f8f3!important;color:var(--ink)!important;font-family:Arial,Helvetica,sans-serif!important;font-size:14px;line-height:1.52} body *{box-sizing:border-box}
+#site-header{background:#fff;color:#1d2921;border-top:3px solid #6f7759;border-bottom:1px solid var(--line);box-shadow:none!important}
+.site-head-inner,.nav-inner,.editorial-wrap,.metric-inner,main,.publication-footer>div{max-width:1180px;margin:auto;padding-left:24px;padding-right:24px}
+.site-head-inner{height:59px;display:flex;align-items:center;justify-content:space-between}.publication-id{display:flex;gap:17px;align-items:baseline}.institution{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:19px;letter-spacing:-.02em}.edition,.head-byline{font-size:12px;color:#5e695f}.dot-separator{color:#aeb7ad;margin:0 7px}.nav-inner{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #edf0eb;gap:14px}.site-nav{display:flex;gap:30px;overflow-x:auto}.tab-btn{padding:13px 0 12px;background:transparent;border:0;border-bottom:2px solid transparent;color:#5c695f;font-size:12px;white-space:nowrap;cursor:pointer;transition:none!important}.tab-btn.active{background:none!important;color:#223a29!important;border-bottom:2px solid #6f7759!important;box-shadow:none!important;font-weight:700!important}.tab-btn:hover{color:#233a28}.document-actions{display:flex;gap:14px;flex-shrink:0}.document-actions button{background:none;border:0;color:#4e6555;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font-size:11px;padding:8px 0}
+.study-introduction{background:#fff;border-bottom:1px solid var(--line)} .editorial-wrap{padding-top:43px;padding-bottom:0}.eyebrow,.section-kicker,.method-index,.side-section-label,.metadata-label{font-size:10px!important;text-transform:uppercase;letter-spacing:.115em;color:#57705e!important;font-weight:700!important;font-family:Arial,Helvetica,sans-serif!important}.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:70px;margin-top:15px}.study-heading h1{font-family:Georgia,'Times New Roman',serif!important;font-weight:400!important;color:#22382a;font-size:clamp(36px,4vw,54px);line-height:1.12;letter-spacing:-.035em}.research-subtitle{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.42;color:#3b493f;max-width:780px;margin-top:15px}.study-description{font-size:13px;line-height:1.7;max-width:720px;color:#66716a;margin-top:17px;padding-bottom:19px}.study-metadata{border-left:1px solid var(--line);padding:4px 0 0 20px;font-size:12px;line-height:1.65}.study-metadata p{margin:6px 0 15px;color:#35473c}.study-metadata p span{color:#69776d}.study-metadata .metadata-label:not(:first-child){margin-top:8px}.research-strands{border-top:1px solid var(--line);display:flex;gap:37px;flex-wrap:wrap;padding:13px 0;font-size:11px;color:#607069}.research-strands strong{font-family:Georgia,serif;font-weight:400;font-size:14px;margin-right:8px;color:#5f6a4f}
+.metric-strip{background:var(--olive-light);border-bottom:1px solid var(--line)}.metric-inner{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-top:22px;padding-bottom:24px}.metric{padding:0 20px;border-right:1px solid var(--line)}.metric:first-child{padding-left:0}.metric:last-child{border:0}.metric-label{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#68746a}.metric-reading{display:flex;align-items:baseline;gap:7px;margin-top:4px}.metric-reading>span{font-family:Georgia,serif;font-size:31px;line-height:1.25;color:#445438}.metric-reading small{font-size:12px;color:#56675c}.metric-foot{font-size:11px;color:#8a948b;margin-top:2px;min-height:18px}
+main{padding-top:32px!important;padding-bottom:42px!important;max-width:1180px!important}.tab-panel>div{box-shadow:none!important}.tab-panel .bg-white,.tab-panel .bg-sand-50,.tab-panel .bg-sand-100,.tab-panel .bg-sand-50\/70,.tab-panel .bg-emerald-50\/70,.tab-panel .bg-rose-50\/70,.tab-panel .bg-amber-50\/70{background:#fff!important}.tab-panel .border-sand-200,.tab-panel .border-sand-300{border-color:var(--line)!important}.tab-panel .rounded-2xl,.tab-panel .rounded-xl,.tab-panel .rounded-lg,.tab-panel .rounded-full{border-radius:3px!important}.tab-panel .shadow-sm{box-shadow:none!important}.tab-panel h2{font-family:Georgia,'Times New Roman',serif!important;font-size:24px!important;font-weight:400!important;line-height:1.25;color:#273d2f!important;margin-top:5px}.tab-panel h3{color:#2e4937}.tab-panel .font-mono{font-family:Arial,Helvetica,sans-serif!important}.tab-panel .text-emerald-800,.tab-panel .text-emerald-700,.tab-panel .text-forest-950,.tab-panel .text-forest-900,.tab-panel .text-forest-800{color:#3c5848!important}.tab-panel .font-extrabold{font-weight:600!important}.tab-panel .text-xs{font-size:11.5px}.tab-panel table{font-size:12px;border-collapse:collapse;width:100%}.tab-panel table th{background:#f0f3ef!important;color:#3a4b3e!important;border-bottom:1px solid var(--line);font-size:11px!important;letter-spacing:0;font-family:Arial,Helvetica,sans-serif;font-weight:700}.tab-panel table td{border-bottom:1px solid #e8ebe6;padding-top:9px!important;padding-bottom:9px!important}.tab-panel table tr:hover{background:#f6f8f5!important}.tab-panel table span.rounded-full{border-radius:0!important;background:transparent!important;color:#5b6b61!important;padding:0!important}.tab-panel input:not([type=checkbox]),.tab-panel select{background:#fff!important;border:1px solid #ccd4cb!important;border-radius:2px!important;color:#253b2e!important;font-size:12px;box-shadow:none!important}.tab-panel input:focus,.tab-panel select:focus,.tab-panel button:focus-visible,.tab-btn:focus-visible{outline:2px solid #607e67;outline-offset:2px}.tab-panel button{cursor:pointer;box-shadow:none!important;transition:none!important}.tab-panel button:not(.stretch-pill):not(.tab-btn){border-radius:2px!important}.tab-panel .bg-forest-800,.tab-panel .bg-forest-900{background:#465f4c!important;color:white!important}.tab-panel .text-slate-500,.tab-panel .text-slate-600{color:#6a786e!important}
+.section-heading{margin-bottom:20px}.section-heading h2{margin:5px 0 11px!important}.section-heading p{max-width:790px;color:#6b766d;font-size:13px;line-height:1.65}.section-heading .subtle-toggle{margin-top:14px;background:#f2f4ec!important;border:1px solid #d6dcc8;color:#576248!important;padding:8px 12px;font-size:12px;font-weight:400!important}.subtle-toggle #auditToggleIndicator{display:inline-block;width:7px;height:7px;margin-right:8px;background:#737b5c;border-radius:50%}.zone-selector{display:flex;flex-wrap:wrap;gap:8px;padding:14px 0!important;margin-top:12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.stretch-pill{border:1px solid transparent!important;background:transparent!important;font-size:12px!important;padding:6px 9px!important;color:#55635a}.stretch-pill.active{background:#f0f2e8!important;border-color:#cbd2b8!important;color:#49563d!important;font-weight:700}.stretch-pill:hover{background:#f1f3ef!important}.map-filter{display:flex;align-items:center;gap:17px;flex-wrap:wrap;padding-top:15px;font-size:11px;color:#607166}.map-filter>span{color:#859087}.map-filter label{display:inline-flex;align-items:center;gap:6px;cursor:pointer}.map-filter input{width:13px;height:13px;accent-color:#5c745f}
+#tab-corridor>div:first-child{background:transparent!important;border:0!important;padding:0!important;margin-bottom:20px}.map-paper{border:1px solid #d8dfd6!important;background:#fff;overflow:hidden;display:flex;flex-direction:column;border-radius:2px}.map-labelbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;background:#fff;border-bottom:1px solid var(--line);color:#344b3a}.map-labelbar strong{font-size:12px;font-weight:700}.map-labelbar span{font-size:11px;color:#869187}.map-paper svg{background:#f5f6f0;max-height:440px}.map-legend{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:13px 16px;background:#fff;font-size:11px;color:#68776c}.map-legend>span{display:inline-flex;align-items:center;gap:5px}.map-legend small{margin-left:auto;font-size:10px;color:#7a887d}.legend-circle{display:inline-block;width:9px;height:9px;border-radius:50%;border:1px solid #65846b;background:#5f8c6c}.legend-circle.palm{border-color:#819d92;background:#819d92}.legend-circle.shrub{border-color:#b99890;background:#b99890}.legend-line{width:17px;height:3px;display:inline-block;background:#c29183}.figure-caption,.chart-caption{font-size:10px!important;line-height:1.5!important;color:#718076!important}.figure-caption{border-top:1px solid #edf0eb;padding:10px 16px 12px}.chart-caption{margin-top:12px}.map-aside{background:#fff;border:1px solid #d8dfd6;border-radius:2px;align-self:start}.map-aside-top,.map-reading,.map-source{padding:18px 18px 16px}.map-reading,.map-source{border-top:1px solid #e4e9e2}.map-aside h3{font:400 24px/1.25 Georgia,serif!important;color:#2b4232!important;margin-top:7px}.map-aside .muted{font-size:12px;color:#6c786e;margin-top:9px;line-height:1.55}.compact-meta{display:flex;justify-content:space-between;gap:8px;font-size:11px;padding:17px 0 9px;border-bottom:1px solid var(--line);color:#758277}.compact-meta strong{font-weight:600;color:#405947;text-align:right}.compact-rows>div{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #eef1ec;font-size:11px;color:#69786c}.compact-rows strong{font-size:13px;font-weight:600;color:#314b37;text-align:right}.map-reading p,.map-source p{font-size:12px;color:#6b786e;line-height:1.65;margin-top:9px}.selected-note{font-style:italic;color:#8a958a!important}.map-source>span{font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#738078}#vectorAndInspectorGrid{gap:18px!important}
+.research-panel{border:1px solid var(--line);background:#fff;border-radius:2px;padding:23px 24px}.research-panel>div[style]{box-shadow:none}.under-table-note{font-size:11px;color:#79877b;margin-top:14px}.research-panel>div .bg-sand-50{background:#f9faf8!important}.research-panel .max-h-\[480px\]{max-height:520px}.analysis-heading{display:flex;justify-content:space-between;align-items:start;gap:16px;border-bottom:1px solid var(--line);padding-bottom:19px;margin-bottom:23px}.analysis-heading p{max-width:660px}.analysis-actions{display:flex;gap:7px;flex-shrink:0}.analysis-actions button{background:#fff!important;border:1px solid #bbcbbd!important;padding:8px 10px;color:#415b46!important;font-size:11px}.analysis-actions button:hover{background:#eff3ee!important}.seg-length-input{width:100%}.tally-cell-input{max-width:48px!important}.research-panel canvas{max-width:100%}
+.methods-document{background:#fff;border:1px solid var(--line);padding:29px 32px}.methods-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;row-gap:30px;margin:28px 0 0}.methods-columns article{border-top:1px solid var(--line);padding:14px 0 7px}.methods-columns h3,.method-bottom h3,.references h3{font:400 21px/1.25 Georgia,serif!important;color:#2d4936;margin:10px 0 12px}.methods-columns p,.method-bottom p,.method-bottom li{color:#5b695e;font-size:12.5px;line-height:1.72}.source-line{font-size:11px!important;color:#6e7c70;margin-top:11px}.source-line a,.references a{color:#2d6541;text-decoration:underline;text-underline-offset:3px}.method-equation{background:#f6f8f5;padding:12px 13px;margin-top:13px;font-family:Georgia,serif;line-height:2!important;color:#314c3a!important}.method-bottom{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:23px 0;margin-top:18px;border-top:1px solid var(--line)}.method-bottom h3{font-size:19px}.method-bottom p{margin-bottom:8px}.method-bottom ol{list-style:decimal outside;padding-left:20px}.method-bottom li{padding-left:4px;margin:0 0 5px}.references{padding-top:21px;border-top:1px solid var(--line)}.references h3{font-size:18px;margin:0 0 13px}.references p{font-size:11px;line-height:1.65;color:#718075;margin-bottom:7px}
+.publication-footer{background:#fff;border-top:1px solid var(--line);color:#7d887e}.publication-footer>div{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px;font-size:11px}
+#toastBanner{background:#405d4a!important;color:#fff!important;border-radius:2px!important;box-shadow:none!important} .hidden,[hidden]{display:none!important}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:12px}.study-metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 16px;border-left:none;border-top:1px solid var(--line);padding:14px 0}.study-metadata .metadata-label:not(:first-child){margin-top:0}.study-metadata p{margin:0}.metric-inner{grid-template-columns:repeat(2,1fr);gap:15px 0}.metric:nth-child(2){border:0}.metric:nth-child(3){padding-left:0}.methods-columns,.method-bottom{grid-template-columns:1fr;gap:24px}.site-nav{gap:18px}.head-byline{display:none}}
+@media(max-width:600px){.site-head-inner,.nav-inner,.editorial-wrap,.metric-inner,main,.publication-footer>div{padding-left:17px;padding-right:17px}.site-head-inner{height:50px}.edition{display:none}.nav-inner{overflow-x:auto}.document-actions{display:none}.editorial-wrap{padding-top:30px}.study-heading h1{font-size:40px}.research-subtitle{font-size:17px}.study-metadata{display:block}.study-metadata p{margin:3px 0 10px}.research-strands{gap:10px 22px}.metric{padding-left:12px;padding-right:12px}.metric-reading>span{font-size:27px}.metric-label{font-size:9px}.metric-foot{font-size:10px}.research-panel,.methods-document{padding:16px}.analysis-heading{display:block}.analysis-actions{margin-top:15px}.tab-panel h2{font-size:23px!important}.map-paper svg{min-width:740px}}
+@media print{#site-header{position:static}.document-actions,.zone-selector,.map-filter,.analysis-actions{display:none}.tab-panel.hidden{display:block!important;break-before:page}.publication-footer{position:static}.map-paper svg{max-width:100%;min-width:0}a{text-decoration:none!important}}
+
+@media(min-width:1024px){#vectorAndInspectorGrid>.map-paper{grid-column:span 8 / span 8;min-width:0}#vectorAndInspectorGrid>.map-aside{grid-column:span 4 / span 4;min-width:0}}
+@media(max-width:1023px){#vectorAndInspectorGrid>.map-paper,#vectorAndInspectorGrid>.map-aside{grid-column:1 / -1}}
+#vectorAndInspectorGrid>.map-paper>.relative{flex:1;min-width:0}
+#vectorAndInspectorGrid>.map-paper{width:100%}
+#vectorAndInspectorGrid>.map-aside{width:100%}
+
+.map-title-container{background:#fff!important;border-bottom:1px solid var(--line)!important;color:#253c2e!important;padding:0!important}.map-title-container .map-labelbar{background:#fff!important;border:0!important;min-height:44px;padding:12px 15px}.map-labelbar span{text-transform:none!important}.map-paper #activeStretchBadge{background:none!important;color:#7b887e!important;font-family:Arial,Helvetica,sans-serif!important;font-size:10px!important;font-weight:400!important;padding:0!important;border:0!important}.map-paper #activeStretchTitle{color:#36503f!important}.map-paper{max-width:100%}
+</style></head>
+<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-forest-200 selection:text-forest-950" data-research-status="working-model">
+<header class="sticky top-0 z-40" id="site-header">
+<div class="site-head-inner">
+<div class="publication-id"><span class="institution">AMU / Aligarh</span><span class="edition">Urban ecology and urbanism study</span></div>
+<div class="head-byline">Saud Ahmad <span class="dot-separator">/</span> Research visualisation</div>
+</div>
+<div class="nav-inner">
+<nav aria-label="Study sections" class="site-nav">
+<button class="tab-btn active" data-tab="corridor" type="button">Study area</button>
+<button class="tab-btn" data-tab="taxonomy" type="button">Species register</button>
+<button class="tab-btn" data-tab="calculator" type="button">Indicators</button>
+<button class="tab-btn" data-tab="methods" type="button">Research approach</button>
+</nav>
+<div class="document-actions"><button id="btnExportCsv" type="button">Export CSV</button><button id="btnExportAllJson" type="button">Export JSON</button></div>
+</div>
+</header>
+<section aria-labelledby="main-title" class="study-introduction"><div class="editorial-wrap">
+<div class="eyebrow">Street-level ecological knowledge / Aligarh, India</div>
+<div class="hero-grid">
+<div class="study-heading"><h1 id="main-title">Beyond Green Cover</h1>
+<p class="research-subtitle">Street-level tree mapping as a tool for climate-responsive urbanism in Aligarh, India.</p>
+<p class="study-description">An institutional street corridor at Aligarh Muslim University offers a case for asking what a planting inventory can reveal beyond satellite-derived vegetation cover. The study relates urban heat, street ecology, everyday movement and the production of local ecological knowledge to questions of climate-responsive urbanism and landscape management.</p>
+</div>
+<div class="study-metadata"><div class="metadata-label">Study focus</div>
+<p>Bab-e-Syed to Centenary Gate<br/>Aligarh Muslim University</p>
+<div class="metadata-label">Urbanism lens</div><p>Street ecology and public realm structure<br/><span>Heat, mobility, planting form and local ecological knowledge</span></p>
+<div class="metadata-label">Data basis</div><p>Plan-derived working inventory<br/><span>Scenario calculations, pending ground validation</span></p>
+</div>
+</div>
+<div class="research-strands"><span><strong>01</strong> Urban heat and land-cover change</span><span><strong>02</strong> Street ecology and movement</span><span><strong>03</strong> Urban management and stewardship</span></div>
+</div></section>
+<section aria-label="Working inventory summary" class="metric-strip"><div class="metric-inner">
+<div class="metric"><div class="metric-label">Working stem tally</div><div class="metric-reading"><span id="kpiTotalTrees">196</span><small>stems</small></div><div class="metric-foot" id="kpiTreeFilterSub">Tree taxa in editable model</div></div>
+<div class="metric"><div class="metric-label">Linear density</div><div class="metric-reading"><span id="kpiDensity">16.6</span><small>per 100 m</small></div><div class="metric-foot" id="kpiCpaTotal">Assumed length: 1,180 m</div></div>
+<div class="metric"><div class="metric-label">Species diversity</div><div class="metric-reading"><span id="kpiShannon">2.13</span><small>Shannon H'</small></div><div class="metric-foot" id="kpiRichnessBadge">S = 13 counted taxa</div></div>
+<div class="metric"><div class="metric-label">Largest species share</div><div class="metric-reading"><span id="kpiBergerParker">28.6</span><small>%</small></div><div class="metric-foot" id="kpiEvennessSub">Working counts, not census results</div></div>
+</div></section>
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6"><div class="tab-panel space-y-6" id="tab-corridor">
+<div class="bg-white rounded-2xl border border-sand-200 p-4 shadow-sm space-y-4">
+<div class="section-heading"><div class="section-kicker">01 / Study area</div><h2>Campus corridor and planting structure</h2><p>Six areas identified in the landscape documentation. The illustration provides a spatial reading of the corridor, not a georeferenced site survey.</p></div>
+<div aria-label="Choose study area" class="zone-selector" id="stretchSelectorGroup">
+<button class="stretch-pill active" data-stretch="all" type="button">Entire corridor</button>
+<button class="stretch-pill" data-stretch="s1" type="button">Bab-e-Syed</button>
+<button class="stretch-pill" data-stretch="s2" type="button">Staff Club</button>
+<button class="stretch-pill" data-stretch="s3" type="button">VC Lodge</button>
+<button class="stretch-pill" data-stretch="s4" type="button">Library</button>
+<button class="stretch-pill" data-stretch="s5" type="button">Duck Pond</button>
+<button class="stretch-pill" data-stretch="s6" type="button">Centenary Gate</button>
+</div>
+<div aria-label="Diagram layers" class="map-filter"><span>Show</span>
+<label><input checked="" id="layerCanopy" type="checkbox"/> Broadleaf trees</label>
+<label><input checked="" id="layerPalm" type="checkbox"/> Palms</label>
+<label><input checked="" id="layerShrub" type="checkbox"/> Ornamental plants</label>
+<label><input checked="" id="layerGaps" type="checkbox"/> Indicative planting gaps</label>
+<label><input checked="" id="layerDrainage" type="checkbox"/> Landscape edges</label>
+</div>
+</div><div class="grid grid-cols-1 lg:grid-cols-12 gap-6" id="vectorAndInspectorGrid">
+<div class="map-paper">
+<div class="map-title-container">
+<div class="map-labelbar"><strong id="activeStretchTitle">Bab-e-Syed to Centenary Gate</strong><span id="activeStretchBadge">Six study zones</span></div>
+</div>
+<div class="relative w-full bg-[#f4f3ee] overflow-x-auto custom-scrollbar">
+<svg aria-label="Illustrative AMU corridor study areas and planting symbols" class="w-full min-w-[780px] h-auto select-none" id="corridorSvg" viewbox="0 0 1140 470" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="25" id="gridPattern" patternunits="userSpaceOnUse" width="25">
+<path d="M 25 0 L 0 0 0 25" fill="none" stroke="#e5e2d9" stroke-width="0.7"></path>
+</pattern>
+<pattern height="8" id="GrassBuffer" patternunits="userSpaceOnUse" width="8">
+<rect fill="#cde5c3" height="8" width="8"></rect>
+<circle cx="2" cy="2" fill="#4f8a3d" opacity="0.55" r="0.8"></circle>
+<circle cx="6" cy="6" fill="#4f8a3d" opacity="0.55" r="0.8"></circle>
+</pattern>
+</defs><text fill="#59665f" font-family="Arial" font-size="12" id="svgSubHeader" x="28" y="32">Six study zones, schematic view</text>
+<rect fill="#f6f7f3" height="470" width="1140"></rect>
+<g id="svgCorridorScene"></g></svg>
+</div>
+<div class="px-4 py-3 bg-sand-50 border-t border-sand-200 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600"><div class="map-legend"><span><i class="legend-circle canopy"></i> Broadleaf</span><span><i class="legend-circle palm"></i> Palm</span><span><i class="legend-circle shrub"></i> Ornamental</span><span><i class="legend-line gap"></i> Possible planting gap</span><small id="svgPointCounter">Illustrative markers</small></div></div>
+<div class="figure-caption">Figure 1. Schematic reconstruction of the AMU corridor study areas. Source: author's interpretation of landscape documentation. Diagram is not to scale.</div></div>
+<aside class="map-aside">
+<div class="map-aside-top"><div class="side-section-label">Selected study area</div>
+<h3 id="stretchCardTitle">Bab-e-Syed to Centenary Gate</h3>
+<p class="muted" id="stretchCardDesc">Institutional corridor linking six mapped areas.</p>
+<div class="compact-meta"><span>Working segment</span><strong id="stretchCardScale">6 zones, 5 tally segments</strong></div>
+<div class="compact-rows"><div><span>Working stems</span><strong id="stretchStatTrees">196 stems</strong></div>
+<div><span>Stems per 100 m</span><strong id="stretchStatDensity">16.6</strong></div>
+<div><span>Most abundant</span><strong id="stretchStatDom">A. indica</strong></div>
+<div><span>Idealised crown area</span><strong id="stretchStatCont">Calculated from assumed crown diameters</strong></div></div>
+</div>
+<div class="map-reading"><div class="side-section-label">Interpretation</div><p id="stretchSpatialNote">Individual symbols are illustrative and cannot be used as a precise tree census.</p>
+<p class="selected-note" id="selectedMarkerCaption">Select a symbol to read its illustrative species assignment.</p>
+</div>
+<div class="map-source"><span>Map note</span><p>The map markers and editable stem counts are separate representations. Coordinates, individual trees and shade gaps require field confirmation.</p></div>
+</aside>
+</div>
+</div>
+<div class="tab-panel hidden space-y-6" id="tab-taxonomy">
+<div class="research-panel">
+<div class="section-heading"><div class="section-kicker">02 / Classification</div><h2>Species register</h2>
+<p>A working transcription of 58 numbered source labels, with one entry split into two records. Common names, taxonomic names and life forms are kept separate from the editable stem tally. The underlying schedule and species assignments still require verification.</p>
+<button class="subtle-toggle" id="btnToggleStrictAudit" type="button"><span aria-hidden="true" id="auditToggleIndicator"></span><span id="auditToggleText">Tree taxa only</span></button>
+</div>
+<div class="mt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+<div class="flex flex-wrap items-center gap-2">
+<select aria-label="Filter by Life Form" class="rounded-lg border border-sand-300 bg-white px-3 py-1.5 text-xs font-medium text-forest-950" id="taxFilterLifeForm">
+<option value="all">All life forms</option>
+<option value="Canopy Tree">Canopy &amp; Understory Trees</option>
+<option value="Palm / Arborescent">Palms &amp; Arborescent Monocots</option>
+<option value="Shrub / Climber">Shrubs, Hedges &amp; Climbers</option>
+<option value="Groundcover / Succulent">Groundcovers, Succulents &amp; Herbs</option>
+<option value="Artifact / Unverified">Non-Plant / Unresolved Tag</option>
+</select>
+<select aria-label="Filter by Audit Status" class="rounded-lg border border-sand-300 bg-white px-3 py-1.5 text-xs font-medium text-forest-950" id="taxFilterStatus">
+<option value="all">All Audit Statuses</option>
+<option value="Accepted Primary">Accepted Primary Taxon</option>
+<option value="Merged Duplicate">Merged Duplicate / Synonym</option>
+<option value="Separated Non-Tree">Separated (Shrub / Palm / Herb)</option>
+<option value="Excluded Artifact">Excluded (Weed / Light Pole / Ambiguous)</option>
+</select>
+</div>
+<div class="relative flex-1 max-w-xs">
+<input class="w-full rounded-lg border border-sand-300 bg-white pl-3 pr-8 py-1.5 text-xs text-forest-950 focus:outline-none focus:border-forest-700" id="taxSearchInput" placeholder="Search CAD label, scientific or common name..." type="text"/>
+</div>
+</div>
+<div class="mt-4 overflow-x-auto custom-scrollbar border border-sand-200 rounded-xl max-h-[480px]">
+<table class="w-full text-left border-collapse text-xs">
+<thead class="bg-forest-950 text-white sticky top-0 z-10">
+<tr>
+<th class="py-2.5 px-3 font-mono text-[11px]">Source ID</th>
+<th class="py-2.5 px-3">Working label</th>
+<th class="py-2.5 px-3">Reconciled Botanical Name</th>
+<th class="py-2.5 px-3">Family &amp; Common Name</th>
+<th class="py-2.5 px-3">Life Form Classification</th>
+<th class="py-2.5 px-3">Audit Decision</th>
+<th class="py-2.5 px-3 text-right font-mono">Working stems</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-sand-200 bg-white" id="taxonomyTableBody"></tbody>
+</table>
+</div>
+<p class="under-table-note">The planting labels reflect the working transcription of the supplied landscape schedule. Accepted names and quantities require specimen-level or drawing-set verification.</p></div>
+</div>
+<div class="tab-panel hidden space-y-6" id="tab-calculator">
+<div class="research-panel">
+<div class="section-heading analysis-heading"><div><div class="section-kicker">03 / Model outputs</div><h2>Ecological indicators</h2>
+<p>Values are derived from editable working stem counts and assumed segment lengths. Crown projection is an idealised sum of circular crown footprints and does not account for overlap.</p></div>
+<div class="analysis-actions"><button id="btnResetBaseline" type="button">Reset</button><button id="btnSaveTallyLocal" type="button">Save locally</button></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-5 gap-3 my-4">
+<div class="bg-sand-50 p-3 rounded-xl border border-sand-200">
+<div class="text-[11px] font-mono font-semibold text-forest-800">1. Bab-e-Syed</div>
+<label class="block text-[11px] text-slate-500 mt-1">Segment Length (m)</label>
+<input class="seg-length-input mt-0.5 w-full rounded border border-sand-300 bg-white px-2 py-1 text-xs font-mono font-bold text-forest-950" data-seglen="s1" max="1000" min="50" type="number" value="220"/>
+<div class="text-[11px] font-mono text-emerald-700 mt-1.5" id="segSummary_s1">38 trees · 17.3/100m</div>
+</div>
+<div class="bg-sand-50 p-3 rounded-xl border border-sand-200">
+<div class="text-[11px] font-mono font-semibold text-forest-800">2. Staff Club</div>
+<label class="block text-[11px] text-slate-500 mt-1">Segment Length (m)</label>
+<input class="seg-length-input mt-0.5 w-full rounded border border-sand-300 bg-white px-2 py-1 text-xs font-mono font-bold text-forest-950" data-seglen="s2" max="1000" min="50" type="number" value="210"/>
+<div class="text-[11px] font-mono text-emerald-700 mt-1.5" id="segSummary_s2">31 trees · 14.8/100m</div>
+</div>
+<div class="bg-sand-50 p-3 rounded-xl border border-sand-200">
+<div class="text-[11px] font-mono font-semibold text-forest-800">3. VC Lodge</div>
+<label class="block text-[11px] text-slate-500 mt-1">Segment Length (m)</label>
+<input class="seg-length-input mt-0.5 w-full rounded border border-sand-300 bg-white px-2 py-1 text-xs font-mono font-bold text-forest-950" data-seglen="s3" max="1000" min="50" type="number" value="280"/>
+<div class="text-[11px] font-mono text-emerald-700 mt-1.5" id="segSummary_s3">49 trees · 17.5/100m</div>
+</div>
+<div class="bg-sand-50 p-3 rounded-xl border border-sand-200">
+<div class="text-[11px] font-mono font-semibold text-forest-800">4. Library</div>
+<label class="block text-[11px] text-slate-500 mt-1">Segment Length (m)</label>
+<input class="seg-length-input mt-0.5 w-full rounded border border-sand-300 bg-white px-2 py-1 text-xs font-mono font-bold text-forest-950" data-seglen="s4" max="1000" min="50" type="number" value="240"/>
+<div class="text-[11px] font-mono text-emerald-700 mt-1.5" id="segSummary_s4">36 trees · 15.0/100m</div>
+</div>
+<div class="bg-sand-50 p-3 rounded-xl border border-sand-200">
+<div class="text-[11px] font-mono font-semibold text-forest-800">5–6. Pond &amp; Centenary</div>
+<label class="block text-[11px] text-slate-500 mt-1">Segment Length (m)</label>
+<input class="seg-length-input mt-0.5 w-full rounded border border-sand-300 bg-white px-2 py-1 text-xs font-mono font-bold text-forest-950" data-seglen="s5" max="1000" min="50" type="number" value="230"/>
+<div class="text-[11px] font-mono text-emerald-700 mt-1.5" id="segSummary_s5">42 trees · 18.3/100m</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<div class="lg:col-span-7 overflow-x-auto custom-scrollbar border border-sand-200 rounded-xl">
+<table class="w-full text-left border-collapse text-xs">
+<thead class="bg-forest-900 text-white">
+<tr>
+<th class="py-2.5 px-3">Working tree / palm taxon</th>
+<th class="py-2.5 px-2 text-center font-mono">Crown (m)</th>
+<th class="py-2.5 px-2 text-center font-mono" title="Bab-e-Syed">S1</th>
+<th class="py-2.5 px-2 text-center font-mono" title="Teachers' Staff Club">S2</th>
+<th class="py-2.5 px-2 text-center font-mono" title="VC Lodge">S3</th>
+<th class="py-2.5 px-2 text-center font-mono" title="Maulana Azad Library">S4</th>
+<th class="py-2.5 px-2 text-center font-mono" title="Duck Pond &amp; Centenary Gate">S5–6</th>
+<th class="py-2.5 px-3 text-right font-mono">Total (n)</th>
+<th class="py-2.5 px-3 text-right font-mono">Rel. %</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-sand-200 bg-white" id="tallyMatrixBody"></tbody>
+</table>
+</div>
+<div class="lg:col-span-5 space-y-5">
+<div class="bg-sand-50 rounded-xl p-4 border border-sand-200">
+<h3 class="text-xs font-bold uppercase tracking-wider text-forest-900 mb-2">Leading species by stem count</h3>
+<div class="relative h-64">
+<canvas id="chartSpeciesAbundance"></canvas>
+</div><p class="chart-caption">Figure 2. Modelled species abundance by stem count. Source: editable working dataset.</p>
+</div>
+<div class="bg-sand-50 rounded-xl p-4 border border-sand-200">
+<h3 class="text-xs font-bold uppercase tracking-wider text-forest-900 mb-2">Segment-level tree density (stems / 100 m)</h3>
+<div class="relative h-60">
+<canvas id="chartStretchMetrics"></canvas>
+</div><p class="chart-caption">Figure 3. Density by assumed segment length. Source: editable working dataset.</p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="tab-panel hidden space-y-6" id="tab-methods">
+<div class="methods-document">
+<div class="section-heading"><div class="section-kicker">04 / Research approach</div>
+<h2>Reading urban green infrastructure at street scale</h2>
+<p>The analytical question examines how a planted street corridor can be read as part of urbanism rather than as green cover alone. This study uses a secondary-city campus corridor to consider the information gained, and lost, when vegetation is represented at different scales and disconnected from the lived street environment.</p>
+</div>
+<div class="methods-columns">
+<article><div class="method-index">01 / The crisis</div><h3>Land-cover change and urban heat</h3>
+<p>Khan, Bano and Khan (2025) report an increase of 21.10% in built-up area and a decline of 24.55% in vegetation area across Aligarh between 2001 and 2021. Their satellite-based analysis also finds systematically higher land-surface temperatures in the wider main city than the AMU campus area. These findings establish the wider spatial context, not a temperature measurement for this corridor.</p>
+<p class="source-line"><a href="https://doi.org/10.1080/24749508.2024.2409488" rel="noopener" target="_blank">Khan, Bano &amp; Khan (2025)</a></p></article>
+<article><div class="method-index">02 / The knowledge gap</div><h3>What the overhead view cannot tell us</h3>
+<p>Satellite land-cover and LST analysis describes broad patterns but does not, at ordinary classification resolution, provide a verified inventory of roadside taxa, tree dimensions, planting conditions or the experience of walking through particular street edges. A plan-derived register can organise these questions; direct fieldwork is required to answer them.</p>
+<p class="source-line"><a href="https://doi.org/10.1038/s41893-024-01295-w" rel="noopener" target="_blank">Gupta et al. (2024)</a> / <a href="https://doi.org/10.1177/03091333241252520" rel="noopener" target="_blank">Ocón et al. (2024)</a></p></article>
+<article><div class="method-index">03 / The method</div><h3>Plan to register, register to questions</h3>
+<p>The present prototype organises a six-zone landscape drawing into a taxonomic register, five editable tally segments and a schematic map. It computes tree density, proportional abundance, Shannon diversity and idealised crown area. The final two spatial zones are aggregated in the tally. The map symbols are not georeferenced tree records.</p>
+<p class="method-equation">Density = stems / segment length × 100<br/>Shannon H' = −Σ pᵢ ln(pᵢ)<br/>Crown footprint = Σ nᵢ π(dᵢ / 2)²</p></article>
+<article><div class="method-index">04 / Urban stewardship</div><h3>Towards a shared campus tree record</h3>
+<p>A validated register could give horticulture staff, students and researchers a common basis for checking species names, recording canopy conditions and discussing planting priorities. In urbanistic terms, the value lies in linking planting structure to shade, walkability, edge conditions and long-term landscape care. Such joint stewardship is a proposed application, not a collaboration that the prototype claims has already occurred.</p>
+<p class="source-line"><a href="https://doi.org/10.1016/j.ufug.2013.03.002" rel="noopener" target="_blank">Vailshery, Jaganmohan &amp; Nagendra (2013)</a></p></article>
+</div>
+<div class="method-bottom">
+<div><h3>Evidence boundary</h3><p>Current: a plan-derived working register, exploratory stem counts, explicit formulas and an illustrative map.</p><p>Not yet established: individual-tree positional accuracy, measured canopy continuity, pedestrian thermal comfort, statistically sampled uncertainty or a demonstrated cooling effect.</p></div>
+<div><h3>Field validation protocol</h3><ol><li>Check the original drawing schedule and resolve species identifications in the field.</li><li>Record tree coordinates, crown diameters, DBH and condition consistently.</li><li>Survey both walking edges and drainage constraints; verify locations of planting gaps.</li><li>Measure shade and thermal conditions before drawing conclusions about cooling or interventions.</li></ol></div>
+</div>
+<div class="references"><h3>Selected references</h3>
+<p>Khan, D., Bano, S., &amp; Khan, N. (2025). Spatio-temporal analysis of urbanization effects: Unravelling land use and land cover dynamics and their influence on land surface temperature in Aligarh City. <em>Geology, Ecology, and Landscapes, 9</em>(4), 1326-1350. <a href="https://doi.org/10.1080/24749508.2024.2409488" rel="noopener" target="_blank">DOI</a></p>
+<p>Gupta, A., Mora, S., Preisler, Y., Duarte, F., Prasad, V., &amp; Ratti, C. (2024). Tools and methods for monitoring the health of the urban greenery. <em>Nature Sustainability, 7</em>, 536-544. <a href="https://doi.org/10.1038/s41893-024-01295-w" rel="noopener" target="_blank">DOI</a></p>
+<p>Li, H., Zhao, Y., Wang, C., Ürge-Vorsatz, D., Carmeliet, J., &amp; Bardhan, R. (2024). Cooling efficacy of trees across cities is determined by background climate, urban morphology, and tree trait. <em>Communications Earth &amp; Environment, 5</em>, Article 754. <a href="https://doi.org/10.1038/s43247-024-01908-4" rel="noopener" target="_blank">DOI</a></p>
+<p>Ocón, J. P., Stavros, E. N., Steinberg, S. J., Robertson, J., &amp; Gillespie, T. W. (2024). Remote sensing approaches to identify trees to species-level in the urban forest: A review. <em>Progress in Physical Geography: Earth and Environment, 48</em>(3), 438-453. <a href="https://doi.org/10.1177/03091333241252520" rel="noopener" target="_blank">DOI</a></p>
+<p>Vailshery, L. S., Jaganmohan, M., &amp; Nagendra, H. (2013). Effect of street trees on microclimate and air pollution in a tropical city. <em>Urban Forestry &amp; Urban Greening, 12</em>(3), 408-415. <a href="https://doi.org/10.1016/j.ufug.2013.03.002" rel="noopener" target="_blank">DOI</a></p>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-5 right-5 z-50 hidden bg-forest-950 text-white px-4 py-3 rounded-xl shadow-xl border border-forest-700 text-xs font-medium flex items-center gap-2.5" id="toastBanner">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span id="toastMessage">Action completed</span>
+</div>
+<footer class="publication-footer"><div><span>Beyond Green Cover</span><span>Research and visualisation: Saud Ahmad</span><span>Plan-derived working model</span></div></footer>
+<script>
+    // =========================================================================
+    // Six-zone working corridor register
+    // =========================================================================
+    // Study zones are schematic; lengths below are editable analytical assumptions.
+    const STRETCH_META = {
+      all: { name:'Bab-e-Syed to Centenary Gate', badge:'SIX-ZONE SCHEMATIC', scaleText:'6 zones · 5 tally segments', desc:'Campus route connecting Bab-e-Syed, Teachers’ Staff Club, Vice Chancellor Lodge, Maulana Azad Library, Duck Pond and Centenary Gate.', note:'Markers represent a schematic subset; zone locations are illustrative, not survey-grade coordinates.' },
+      s1: { name:'01 · Bab-e-Syed', badge:'STUDY ZONE 01', scaleText:'S1 · 220 m assumed', desc:'Gateway approach and nearby roadside planting.', note:'Investigate spacing, verge access and the presence of canopy gaps in a field survey.' },
+      s2: { name:'02 · Teachers’ Staff Club', badge:'STUDY ZONE 02', scaleText:'S2 · 210 m assumed', desc:'Institutional street segment and roadside plantings.', note:'Compare tree-form crowns and ornamental palms without treating them as equivalent shade providers.' },
+      s3: { name:'03 · Vice Chancellor Lodge', badge:'STUDY ZONE 03', scaleText:'S3 · 280 m assumed', desc:'Campus junction, planted verges and roadside infrastructure.', note:'Record physical tree positions and drainage offsets during ground validation.' },
+      s4: { name:'04 · Maulana Azad Library', badge:'STUDY ZONE 04', scaleText:'S4 · 240 m assumed', desc:'Library and academic frontage with heterogeneous planting.', note:'Assess pedestrian routes and proposed planting opportunities through field inspection.' },
+      s5: { name:'05 · Duck Pond', badge:'STUDY ZONE 05', scaleText:'Shared S5–6 tally', desc:'Park-like junction and waterbody landscape.', note:'The analytical matrix groups Duck Pond and Centenary Gate; map markers are not one-to-one tally records.' },
+      s6: { name:'06 · Centenary Gate', badge:'STUDY ZONE 06', scaleText:'Shared S5–6 tally', desc:'Gate approach and roadside avenue.', note:'The analytical matrix groups this zone with Duck Pond. Individual zone counts are not separately verified.' }
+    };
+
+    const DEFAULT_SPECIES_TALLY = [
+      { id: 'sp1', sci: 'Azadirachta indica', common: 'Neem (Semi-Evergreen)', family: 'Meliaceae', form: 'Canopy Tree', phenology: 'Semi-Evergreen', crown: 9.5, s1: 14, s2: 9, s3: 12, s4: 10, s5: 11 },
+      { id: 'sp2', sci: 'Terminalia arjuna', common: 'Arjun (Brief Deciduous)', family: 'Combretaceae', form: 'Canopy Tree', phenology: 'Semi-Evergreen', crown: 10.0, s1: 8, s2: 6, s3: 8, s4: 6, s5: 9 },
+      { id: 'sp3', sci: 'Ficus benjamina', common: 'Weeping Fig (Evergreen)', family: 'Moraceae', form: 'Canopy Tree', phenology: 'Evergreen', crown: 8.5, s1: 4, s2: 5, s3: 7, s4: 5, s5: 6 },
+      { id: 'sp4', sci: 'Delonix regia', common: 'Gulmohar (Deciduous)', family: 'Fabaceae', form: 'Canopy Tree', phenology: 'Deciduous', crown: 11.0, s1: 3, s2: 3, s3: 4, s4: 3, s5: 4 },
+      { id: 'sp5', sci: 'Pterygota alata', common: 'Buddha Coconut (Petrygota)', family: 'Malvaceae', form: 'Canopy Tree', phenology: 'Semi-Evergreen', crown: 8.0, s1: 2, s2: 2, s3: 5, s4: 4, s5: 2 },
+      { id: 'sp6', sci: 'Casuarina equisetifolia', common: 'Casuarina (Evergreen Needle)', family: 'Casuarinaceae', form: 'Canopy Tree', phenology: 'Evergreen', crown: 6.0, s1: 2, s2: 1, s3: 3, s4: 2, s5: 3 },
+      { id: 'sp7', sci: 'Alstonia scholaris', common: 'Saptaparni (Evergreen)', family: 'Apocynaceae', form: 'Canopy Tree', phenology: 'Evergreen', crown: 8.0, s1: 1, s2: 2, s3: 2, s4: 2, s5: 2 },
+      { id: 'sp8', sci: 'Cassia fistula', common: 'Amaltas (Deciduous)', family: 'Fabaceae', form: 'Canopy Tree', phenology: 'Deciduous', crown: 7.0, s1: 1, s2: 1, s3: 2, s4: 1, s5: 1 },
+      { id: 'sp9', sci: 'Melaleuca citrina', common: 'Bottlebrush (Evergreen)', family: 'Myrtaceae', form: 'Canopy Tree', phenology: 'Evergreen', crown: 5.5, s1: 1, s2: 1, s3: 2, s4: 1, s5: 1 },
+      { id: 'sp10', sci: 'Ceiba pentandra', common: 'Kapok (Deciduous)', family: 'Malvaceae', form: 'Canopy Tree', phenology: 'Deciduous', crown: 10.5, s1: 0, s2: 0, s3: 1, s4: 1, s5: 1 },
+      { id: 'sp11', sci: 'Tabebuia rosea', common: 'Pink Poui (Deciduous)', family: 'Bignoniaceae', form: 'Canopy Tree', phenology: 'Deciduous', crown: 7.5, s1: 1, s2: 0, s3: 1, s4: 1, s5: 1 },
+      { id: 'sp12', sci: 'Melia azedarach', common: 'Bakain (Deciduous)', family: 'Meliaceae', form: 'Canopy Tree', phenology: 'Deciduous', crown: 7.0, s1: 1, s2: 1, s3: 1, s4: 0, s5: 0 },
+      { id: 'sp13', sci: 'Plumeria rubra', common: 'Frangipani (Deciduous)', family: 'Apocynaceae', form: 'Canopy Tree', phenology: 'Deciduous', crown: 4.5, s1: 0, s2: 0, s3: 1, s4: 0, s5: 1 },
+      { id: 'sp14', sci: 'Cedrus deodara', common: 'Deodar Cedar (Evergreen)', family: 'Pinaceae', form: 'Canopy Tree', phenology: 'Evergreen', crown: 6.5, s1: 0, s2: 0, s3: 0, s4: 0, s5: 0 },
+      { id: 'sp15', sci: 'Catalpa bignonioides', common: 'Southern Catalpa (Deciduous)', family: 'Bignoniaceae', form: 'Canopy Tree', phenology: 'Deciduous', crown: 7.0, s1: 0, s2: 0, s3: 0, s4: 0, s5: 0 },
+      { id: 'sp16', sci: 'Roystonea regia', common: 'Royal Palm (Columnar Monocot)', family: 'Arecaceae', form: 'Palm / Arborescent', phenology: 'Evergreen', crown: 4.0, s1: 0, s2: 4, s3: 8, s4: 6, s5: 14 }
+    ];
+
+    const RAW_CAD_SCHEDULE = [
+      { sno: '1', raw: 'Azadirachta indica', sci: 'Azadirachta indica A.Juss.', common: 'Neem (Meliaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 56 },
+      { sno: '2', raw: 'Barleria lupulina', sci: 'Barleria lupulina Lindl.', common: 'Hophead Philippine Violet (Acanthaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 18 },
+      { sno: '3', raw: 'Bougainvillea glabara', sci: 'Bougainvillea glabra Choisy', common: 'Paperflower (Nyctaginaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 24 },
+      { sno: '4', raw: 'Calliandra harrisii', sci: 'Calliandra harrisii (Lindl.) Benth.', common: 'Pink Powderpuff (Fabaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 15 },
+      { sno: '5', raw: 'Casuarina equisetifolia', sci: 'Casuarina equisetifolia L.', common: 'Whistling Pine (Casuarinaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 11 },
+      { sno: '6', raw: 'Melaleuca Citrina', sci: 'Melaleuca citrina (Curtis) Dum.Cours.', common: 'Crimson Bottlebrush (Myrtaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 5 },
+      { sno: '7', raw: 'Jatropha integerrima', sci: 'Jatropha integerrima Jacq.', common: 'Peregrina / Spicy Jatropha (Euphorbiaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 22 },
+      { sno: '8', raw: 'Lagerstroemia indica', sci: 'Lagerstroemia indica L.', common: 'Crape Myrtle / Sawani (Lythraceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 19 },
+      { sno: '9', raw: 'Melaleuca alternifolia', sci: 'Melaleuca alternifolia (Maiden & Betche) Cheel', common: 'Tea Tree (Myrtaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 6 },
+      { sno: '10', raw: 'Roystonea regia', sci: 'Roystonea regia (Kunth) O.F.Cook', common: 'Cuban Royal Palm (Arecaceae)', form: 'Palm / Arborescent', status: 'Separated Non-Tree', count: 32 },
+      { sno: '11', raw: 'Terminalia arjuna', sci: 'Terminalia arjuna (Roxb. ex DC.) Wight & Arn.', common: 'Arjun Tree (Combretaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 37 },
+      { sno: '12', raw: 'Woodfordia fruticosa', sci: 'Woodfordia fruticosa (L.) Kurz', common: 'Fire Flame Bush / Dhataki (Lythraceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 14 },
+      { sno: '13', raw: 'Catharanthas roseus', sci: 'Catharanthus roseus (L.) G.Don', common: 'Sadabahar / Madagascar Periwinkle', form: 'Groundcover / Succulent', status: 'Separated Non-Tree', count: 45 },
+      { sno: '14', raw: 'Duranta erecta', sci: 'Duranta erecta L.', common: 'Golden Dewdrop Hedge (Verbenaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 60 },
+      { sno: '15', raw: 'PETRYGOTA', sci: 'Pterygota alata (Roxb.) R.Br.', common: 'Buddha Coconut (Malvaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 15 },
+      { sno: '16', raw: 'PEREGRINA', sci: 'Jatropha integerrima Jacq.', common: 'Duplicate of S.No 7 (Common Name)', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '17', raw: 'WEEPING FIG', sci: 'Ficus benjamina L.', common: 'Merged with S.No 36 (Ficus benjamina)', form: 'Canopy Tree', status: 'Merged Duplicate', count: 0 },
+      { sno: '18', raw: 'CHINESE HIBISCUS', sci: 'Hibiscus rosa-sinensis L.', common: 'Duplicate of S.No 39 (Common Name)', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '19', raw: 'LAGERSTROEMIA INDICA', sci: 'Lagerstroemia indica L.', common: 'Duplicate of S.No 8 (Uppercase Entry)', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '20', raw: 'NEEM', sci: 'Azadirachta indica A.Juss.', common: 'Duplicate of S.No 1 (Common Name)', form: 'Canopy Tree', status: 'Merged Duplicate', count: 0 },
+      { sno: '21', raw: 'COLEONEMA', sci: 'Coleonema pulchellum I.Williams', common: 'Breath of Heaven Shrub (Rutaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 12 },
+      { sno: '22', raw: 'JATROPHA', sci: 'Jatropha integerrima Jacq.', common: 'Duplicate of S.No 7 & 40', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '23', raw: 'ROYAL PALM', sci: 'Roystonea regia (Kunth) O.F.Cook', common: 'Duplicate of S.No 10 (Common Name)', form: 'Palm / Arborescent', status: 'Merged Duplicate', count: 0 },
+      { sno: '24', raw: 'BOUGAINVILLEA', sci: 'Bougainvillea glabra Choisy', common: 'Duplicate of S.No 3', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '25', raw: 'NERIUM OLEANDER', sci: 'Nerium oleander L.', common: 'Kaner / Oleander (Apocynaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 16 },
+      { sno: '26', raw: 'CASUARINA', sci: 'Casuarina equisetifolia L.', common: 'Duplicate of S.No 5', form: 'Canopy Tree', status: 'Merged Duplicate', count: 0 },
+      { sno: '27', raw: 'CALIANDRA HARISSI', sci: 'Calliandra harrisii (Lindl.) Benth.', common: 'Duplicate of S.No 4 (Orthographic variant)', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '28', raw: 'FIRE FLAMES', sci: 'Woodfordia fruticosa (L.) Kurz', common: 'Duplicate of S.No 12 (Common Name)', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '29a', raw: 'SADABAHAR', sci: 'Catharanthus roseus (L.) G.Don', common: 'Duplicate of S.No 13 (Hindi Name)', form: 'Groundcover / Succulent', status: 'Merged Duplicate', count: 0 },
+      { sno: '29b', raw: 'GANDHRAAJ', sci: 'Gardenia jasminoides J.Ellis', common: 'Duplicate of S.No 37 (Hindi Name)', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '30', raw: 'WEED', sci: 'Unidentified spontaneous flora', common: 'Mapped Blue Patch near VC Lodge Gate 1 (Pg 4)', form: 'Artifact / Unverified', status: 'Excluded Artifact', count: 0 },
+      { sno: '31', raw: 'Arecaceae', sci: 'Arecaceae sp. (Family-level tag)', common: 'Unresolved Palm family entry', form: 'Palm / Arborescent', status: 'Excluded Artifact', count: 0 },
+      { sno: '32', raw: 'Melaleuca bracteata', sci: 'Melaleuca bracteata F.Muell.', common: 'Golden Cloud / Black Tea-Tree (Myrtaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 10 },
+      { sno: '33', raw: 'Ceiba Pentandra', sci: 'Ceiba pentandra (L.) Gaertn.', common: 'Kapok / White Silk-Cotton (Malvaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 3 },
+      { sno: '34', raw: 'Cleistanthus/Lagerstroemia Indica', sci: 'Lagerstroemia indica L.', common: 'Compound slash-label in CAD legend', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '35', raw: 'Delonix Regia', sci: 'Delonix regia (Bojer ex Hook.) Raf.', common: 'Gulmohar / Flame Tree (Fabaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 17 },
+      { sno: '36', raw: 'Ficus Benjamina', sci: 'Ficus benjamina L.', common: 'Weeping Fig / Pucka Tree (Moraceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 27 },
+      { sno: '37', raw: 'Gardenia Jasminoides', sci: 'Gardenia jasminoides J.Ellis', common: 'Cape Jasmine / Gandhraaj (Rubiaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 14 },
+      { sno: '38', raw: 'Hamelia Patens', sci: 'Hamelia patens Jacq.', common: 'Firebush / Scarlet Bush (Rubiaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 11 },
+      { sno: '39', raw: 'Hibiscus Rosa-Sinensis', sci: 'Hibiscus rosa-sinensis L.', common: 'Gurhal / Chinese Hibiscus (Malvaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 20 },
+      { sno: '40', raw: 'Jatropha Integerrima', sci: 'Jatropha integerrima Jacq.', common: 'Duplicate of S.No 7', form: 'Shrub / Climber', status: 'Merged Duplicate', count: 0 },
+      { sno: '41', raw: 'Tabernaemontana Divaricata', sci: 'Tabernaemontana divaricata (L.) R.Br.', common: 'Chandni / Crape Jasmine (Apocynaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 18 },
+      { sno: '42', raw: 'Terminalia Arjuna', sci: 'Terminalia arjuna (Roxb. ex DC.) Wight & Arn.', common: 'Duplicate of S.No 11', form: 'Canopy Tree', status: 'Merged Duplicate', count: 0 },
+      { sno: '43', raw: 'Portulaca Grandiflora', sci: 'Portulaca grandiflora Hook.', common: 'Moss Rose Groundcover (Portulacaceae)', form: 'Groundcover / Succulent', status: 'Separated Non-Tree', count: 30 },
+      { sno: '44', raw: 'Phoenix Dactylifera', sci: 'Phoenix dactylifera L.', common: 'Date Palm / Khajoor (Arecaceae)', form: 'Palm / Arborescent', status: 'Separated Non-Tree', count: 8 },
+      { sno: '45', raw: 'Pachypodium Lamerei', sci: 'Pachypodium lamerei Drake', common: 'Madagascar Palm Succulent (Apocynaceae)', form: 'Groundcover / Succulent', status: 'Separated Non-Tree', count: 4 },
+      { sno: '46', raw: 'Alastonia Scholaris', sci: 'Alstonia scholaris (L.) R.Br.', common: 'Saptaparni / Devil Tree (Apocynaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 9 },
+      { sno: '47', raw: 'Cassia Fistula', sci: 'Cassia fistula L.', common: 'Amaltas / Indian Laburnum (Fabaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 6 },
+      { sno: '48', raw: 'Dypsis Lutescens', sci: 'Chrysalidocarpus lutescens H.Wendl.', common: 'Areca Palm (Arecaceae)', form: 'Palm / Arborescent', status: 'Separated Non-Tree', count: 12 },
+      { sno: '49', raw: 'Tabebuia Rosea', sci: 'Tabebuia rosea (Bertol.) DC.', common: 'Pink Poui / Basant Rani (Bignoniaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 4 },
+      { sno: '50', raw: 'Ixora Coccinea', sci: 'Ixora coccinea L.', common: 'Jungle Geranium / Rugmini (Rubiaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 15 },
+      { sno: '51', raw: 'Agave Sisalana & Yucca Elephantipes', sci: 'Agave sisalana / Yucca gigantea', common: 'Accent Succulents at Duck Pond', form: 'Groundcover / Succulent', status: 'Separated Non-Tree', count: 9 },
+      { sno: '52', raw: 'Cordyline Australis & Furcraea Foetida', sci: 'Cordyline australis / Furcraea foetida', common: 'Ornamental Foliage Monocots', form: 'Groundcover / Succulent', status: 'Separated Non-Tree', count: 8 },
+      { sno: '53', raw: 'Codiaeum Variegatum', sci: 'Codiaeum variegatum (L.) Rumph. ex A.Juss.', common: 'Garden Croton (Euphorbiaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 14 },
+      { sno: '54', raw: 'Ravenala Madagascariensis & Caryota', sci: 'Ravenala madagascariensis / Caryota urens', common: 'Traveller\'s Palm & Fishtail Palm', form: 'Palm / Arborescent', status: 'Separated Non-Tree', count: 7 },
+      { sno: '55', raw: 'Melia Azedarach', sci: 'Melia azedarach L.', common: 'Bakain / Chinaberry (Meliaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 3 },
+      { sno: '56', raw: 'Plumeria Rubra', sci: 'Plumeria rubra L.', common: 'Frangipani / Champa (Apocynaceae)', form: 'Canopy Tree', status: 'Accepted Primary', count: 2 },
+      { sno: '57', raw: 'Thuja Occidentalis', sci: 'Platycladus orientalis / Thuja occidentalis', common: 'Morpankhi / Conifer Shrub (Cupressaceae)', form: 'Shrub / Climber', status: 'Separated Non-Tree', count: 8 },
+      { sno: '58', raw: 'Light Pole / Beta Vulgaris / Nympharaceae', sci: 'Non-tree CAD block symbols (LANDCADD 1987)', common: 'Streetlight pole & aquatic/herb symbols', form: 'Artifact / Unverified', status: 'Excluded Artifact', count: 0 }
+    ];
+
+    let state = {
+      activeTab: 'corridor',
+      activeStretch: 'all',
+      strictTreeOnly: true,
+      season: 'summer',
+      solarHour: 14.5,
+      layers: {
+        canopy: true,
+        palm: true,
+        shrub: true,
+        gaps: true,
+        drainage: true
+      },
+      segmentLengths: { s1: 220, s2: 210, s3: 280, s4: 240, s5: 230 },
+      speciesTally: JSON.parse(JSON.stringify(DEFAULT_SPECIES_TALLY)),
+      selectedNodeId: 'AMU-S3-014',
+      mapNodes: []
+    };
+
+    // Build accurate map nodes illustrating the six study zones (Pages 6, 9, 1, 11, 4, 10, 8)
+    function initMapNodes() {
+      const nodes = [];
+      const addNode = (id, stretch, x, y, species, form, crown, context, status) => {
+        nodes.push({ id, stretch, x, y, species, form, crown, context, status });
+      };
+
+      // Zone 1: Bab-e-Syed (Page 6: 13 evenly spaced south trees, 10 clustered north trees with gap before T-junction)
+      const s1NorthX = [56, 76, 115, 130, 145, 165, 180, 195, 212, 236];
+      s1NorthX.forEach((x, idx) => addNode(`AMU-S1-N0${idx+1}`, 's1', x, 246 - idx * 1.1, idx % 2 === 0 ? 'Azadirachta indica' : 'Terminalia arjuna', 'Canopy Tree', 8.5, 'Roadside Verge', 'Illustrative marker'));
+      const s1SouthX = [52, 68, 84, 100, 116, 132, 148, 164, 180, 196, 212, 228, 242];
+      s1SouthX.forEach((x, idx) => addNode(`AMU-S1-S0${idx+1}`, 's1', x, 294 - idx * 1.1, idx % 3 === 0 ? 'Terminalia arjuna' : 'Azadirachta indica', 'Canopy Tree', 9.5, 'Roadside Verge', 'Illustrative marker'));
+
+      // Zone 2: Teacher Staff Club (Page 9: 10 north verge trees, 4 NE palms, 8 south trees with 2 huge mature crowns)
+      const s2NorthX = [266, 282, 298, 314, 330, 346, 368, 384, 400, 414];
+      s2NorthX.forEach((x, idx) => addNode(`AMU-S2-N0${idx+1}`, 's2', x, 232 - idx * 1.1, 'Azadirachta indica', 'Canopy Tree', 8.5, 'Roadside Verge', 'Illustrative marker'));
+      [424, 434, 444, 452].forEach((x, idx) => addNode(`AMU-S2-P0${idx+1}`, 's2', x, 218 - idx * 0.8, 'Roystonea regia', 'Palm / Arborescent', 4.2, 'Landscape Buffer / Median', 'Illustrative marker'));
+      const s2SouthX = [268, 288, 308, 326, 360, 386, 406, 432];
+      s2SouthX.forEach((x, idx) => {
+        const isGiant = (idx === 4 || idx === 5); // The 2 huge mature crowns on Page 9 south edge!
+        addNode(`AMU-S2-S0${idx+1}`, 's2', x, 280 - idx * 1.1, isGiant ? 'Ficus benjamina' : 'Terminalia arjuna', 'Canopy Tree', isGiant ? 13.5 : 9.0, 'Roadside Verge', 'Illustrative marker');
+      });
+
+      // Zone 3: Vice Chancellor Lodge (Pages 1, 11 & Page 4 lower half)
+      const s3NorthX = [472, 488, 504, 520, 560, 578, 596, 614, 632, 650];
+      s3NorthX.forEach((x, idx) => addNode(idx === 3 ? 'AMU-S3-014' : `AMU-S3-N0${idx+1}`, 's3', x, 216 - idx * 1.1, idx % 2 === 0 ? 'Azadirachta indica' : 'Pterygota alata', 'Canopy Tree', 8.5, 'Drainage Edge', 'Illustrative marker'));
+      const s3SouthX = [478, 498, 548, 568, 588, 625, 645];
+      s3SouthX.forEach((x, idx) => addNode(`AMU-S3-S0${idx+1}`, 's3', x, 264 - idx * 1.1, idx % 2 === 0 ? 'Ficus benjamina' : 'Delonix regia', 'Canopy Tree', 9.0, 'Landscape Buffer / Median', 'Illustrative marker'));
+      // Pink Lagerstroemia & Peregrina beds in VC Lodge (Page 4)
+      [484, 500, 516, 556, 574, 592, 628].forEach((x, idx) => addNode(`AMU-S3-SH${idx+1}`, 's3', x, 250 - idx * 1.0, idx % 2 === 0 ? 'Lagerstroemia indica' : 'Jatropha integerrima', 'Shrub / Climber', 3.0, 'Landscape Buffer / Median', 'Illustrative marker'));
+      addNode('AMU-S3-P01', 's3', 602, 256, 'Roystonea regia', 'Palm / Arborescent', 4.5, 'Gate / Junction Node', 'Illustrative marker');
+      addNode('AMU-S3-P02', 's3', 614, 255, 'Roystonea regia', 'Palm / Arborescent', 4.5, 'Gate / Junction Node', 'Illustrative marker');
+
+      // Zone 4: Maulana Azad Library & Art Faculty (Page 4 upper half)
+      const s4NorthX = [672, 690, 708, 726, 744, 762, 780, 798, 816, 834];
+      s4NorthX.forEach((x, idx) => addNode(`AMU-S4-N0${idx+1}`, 's4', x, 198 - idx * 1.1, idx % 2 === 0 ? 'Terminalia arjuna' : 'Alstonia scholaris', 'Canopy Tree', 8.5, 'Roadside Verge', 'Illustrative marker'));
+      const s4SouthX = [680, 704, 788, 812, 832];
+      s4SouthX.forEach((x, idx) => addNode(`AMU-S4-S0${idx+1}`, 's4', x, 246 - idx * 1.1, 'Azadirachta indica', 'Canopy Tree', 9.0, 'Drainage Edge', 'Illustrative marker'));
+      [722, 736, 750, 764, 776].forEach((x, idx) => addNode(`AMU-S4-SH${idx+1}`, 's4', x, 232 - idx * 0.9, 'Hibiscus rosa-sinensis', 'Shrub / Climber', 2.8, 'Landscape Buffer / Median', 'Illustrative marker'));
+
+      // Zone 5: Duck Pond Triangular Island (Page 10: 7 star-palms on eastern N-S road edge + island trees)
+      [152, 166, 180, 194, 208, 222, 236].forEach((yVal, idx) => addNode(`AMU-S5-P0${idx+1}`, 's5', 954, yVal, 'Roystonea regia', 'Palm / Arborescent', 4.2, 'Duck Pond Island', 'Illustrative marker'));
+      addNode('AMU-S5-DP1', 's5', 892, 196, 'Delonix regia', 'Canopy Tree', 9.5, 'Duck Pond Island', 'Illustrative marker');
+      addNode('AMU-S5-DP2', 's5', 936, 162, 'Ficus benjamina', 'Canopy Tree', 8.5, 'Duck Pond Island', 'Illustrative marker');
+      addNode('AMU-S5-DP3', 's5', 855, 202, 'Terminalia arjuna', 'Canopy Tree', 9.0, 'Roadside Verge', 'Illustrative marker');
+
+      // Zone 6: Centenary Gate Avenue (Page 8: 3 large SW corner crowns + 1 mid-south large crown + dense double rows)
+      addNode('AMU-S6-SW1', 's6', 964, 152, 'Azadirachta indica', 'Canopy Tree', 12.5, 'Gate / Junction Node', 'Illustrative marker');
+      addNode('AMU-S6-SW2', 's6', 974, 146, 'Terminalia arjuna', 'Canopy Tree', 12.0, 'Gate / Junction Node', 'Illustrative marker');
+      addNode('AMU-S6-SW3', 's6', 972, 158, 'Azadirachta indica', 'Canopy Tree', 12.5, 'Gate / Junction Node', 'Illustrative marker');
+      addNode('AMU-S6-MS1', 's6', 1022, 112, 'Ficus benjamina', 'Canopy Tree', 13.0, 'Roadside Verge', 'Illustrative marker');
+
+      for (let i = 0; i < 8; i++) {
+        const ax = 968 + i * 14;
+        const ay = 118 - i * 9.5;
+        addNode(`AMU-S6-AN${i+1}`, 's6', ax, ay, i % 2 === 0 ? 'Azadirachta indica' : 'Terminalia arjuna', 'Canopy Tree', 8.5, 'Roadside Verge', 'Illustrative marker');
+        addNode(`AMU-S6-AS${i+1}`, 's6', ax + 14, ay + 24, i % 2 === 0 ? 'Terminalia arjuna' : 'Pterygota alata', 'Canopy Tree', 8.5, 'Roadside Verge', 'Illustrative marker');
+      }
+
+      state.mapNodes = nodes;
+    }
+
+    function loadSavedState() {
+      try {
+        const raw = localStorage.getItem('amu_corridor_observatory_v1');
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed.speciesTally && Array.isArray(parsed.speciesTally)) {
+            state.speciesTally = parsed.speciesTally;
+          }
+          if (parsed.segmentLengths) {
+            state.segmentLengths = parsed.segmentLengths;
+          }
+        }
+      } catch (err) {
+        // Ignore storage errors inside sandboxed frames
+      }
+    }
+
+    function showToast(msg) {
+      const banner = document.getElementById('toastBanner');
+      const text = document.getElementById('toastMessage');
+      text.textContent = msg;
+      banner.classList.remove('hidden');
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => {
+        banner.classList.add('hidden');
+      }, 3200);
+    }
+
+    // =========================================================================
+    // 2. RENDER CORRECTED SVG CORRIDOR MAP (ALL 6 CIRCLES + SCHEMATIC GEOMETRY)
+    // =========================================================================
+    function renderCorridorSvg() {
+      const scene = document.getElementById('svgCorridorScene');
+      const subHeader = document.getElementById('svgSubHeader');
+      const stretch = state.activeStretch;
+      const meta = STRETCH_META[stretch];
+
+      document.getElementById('activeStretchBadge').textContent = meta.badge;
+      document.getElementById('activeStretchTitle').textContent = meta.name;
+      document.getElementById('stretchCardTitle').textContent = meta.name;
+      document.getElementById('stretchCardScale').textContent = meta.scaleText;
+      document.getElementById('stretchCardDesc').textContent = meta.desc;
+      document.getElementById('stretchSpatialNote').textContent = meta.note;
+
+      // Simplified decorative symbol geometry.
+      // Filter illustrative markers by selected zone and category.
+      const visibleNodes = state.mapNodes.filter(n => {
+        if (stretch !== 'all' && n.stretch !== stretch) return false;
+        if (n.form === 'Canopy Tree' && !state.layers.canopy) return false;
+        if (n.form === 'Palm / Arborescent' && !state.layers.palm) return false;
+        if (n.form === 'Shrub / Climber' && !state.layers.shrub) return false;
+        return true;
+      });
+
+      document.getElementById('svgPointCounter').textContent = `Showing ${visibleNodes.length} schematic markers`;
+
+      // Zoom transforms for each of the 6 Page 7 circles
+      let viewTransform = '';
+      if (stretch === 's1') viewTransform = 'translate(-35, -155) scale(1.72)';
+      if (stretch === 's2') viewTransform = 'translate(-330, -135) scale(1.72)';
+      if (stretch === 's3') viewTransform = 'translate(-660, -110) scale(1.68)';
+      if (stretch === 's4') viewTransform = 'translate(-985, -80) scale(1.68)';
+      if (stretch === 's5') viewTransform = 'translate(-1190, -45) scale(1.68)';
+      if (stretch === 's6') viewTransform = 'translate(-1340, 45) scale(1.68)';
+
+      subHeader.textContent = stretch === 'all'
+        ? 'SIX STUDY ZONES · SCHEMATIC MAP · NOT TO SCALE'
+        : `${meta.name.toUpperCase()} · SCHEMATIC EXPLORATION`;
+
+      let html = `<g transform="${viewTransform}">`;
+
+      // Six schematic corridor zones
+      const stretchCircles = [
+        { id: 's1', cx: 148, cy: 268, r: 86, label: 'BAB-E-SYED', lx: 148, ly: 372 },
+        { id: 's2', cx: 350, cy: 252, r: 86, label: 'TEACHER STAFF CLUB', lx: 350, ly: 356 },
+        { id: 's3', cx: 558, cy: 235, r: 88, label: 'VICE CHANCELLOR LODGE', lx: 558, ly: 340 },
+        { id: 's4', cx: 752, cy: 218, r: 84, label: 'MAULANA AZAD LIBRARY', lx: 752, ly: 318 },
+        { id: 's5', cx: 905, cy: 192, r: 68, label: 'DUCK POND', lx: 905, ly: 278 },
+        { id: 's6', cx: 1022, cy: 105, r: 82, label: 'CENTENARY GATE', lx: 1045, ly: 204 }
+      ];
+
+      stretchCircles.forEach(sc => {
+        const isCurrent = stretch === sc.id;
+        html += `
+          <g class="cursor-pointer" data-stretch-click="${sc.id}">
+            <circle cx="${sc.cx}" cy="${sc.cy}" r="${sc.r}"
+              fill="${isCurrent ? 'rgba(20, 54, 40, 0.08)' : 'rgba(255,255,255,0.32)'}"
+              stroke="${isCurrent ? '#143628' : '#9ab09b'}"
+              stroke-width="${isCurrent ? '2.2' : '1.5'}"
+              stroke-dasharray="6,4" />
+            <text x="${sc.lx}" y="${sc.ly}" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="800" fill="#526b5a" letter-spacing="0.8">${sc.label}</text>
+          </g>
+        `;
+      });
+
+      // 2. Landscape Buffers, Drainage Channels & Page 4 Blue "WEED" Patch at VC Lodge Gate 1
+      if (state.layers.drainage) {
+        html += `
+          <!-- Roadside Green Buffers -->
+          <path d="M 45 242 L 855 186 L 855 198 L 45 254 Z" fill="url(#GrassBuffer)" stroke="#5c9c49" stroke-width="0.7"/>
+          <path d="M 45 284 L 855 228 L 855 242 L 45 298 Z" fill="url(#GrassBuffer)" stroke="#5c9c49" stroke-width="0.7"/>
+          <!-- Explicit Page 4 Masonry DRAINAGE Channels -->
+          <line x1="460" y1="210" x2="848" y2="183" stroke="#7aa8b5" stroke-width="2.5" stroke-dasharray="7,3"/>
+          <line x1="460" y1="268" x2="848" y2="241" stroke="#7aa8b5" stroke-width="2.5" stroke-dasharray="7,3"/>
+          <!-- Page 4 Blue L-shaped WEED patch at VC Lodge Gate 1 -->
+          <path d="M 526 244 L 548 242 L 548 260 L 538 260 L 538 250 L 526 250 Z" fill="#1d4ed8" fill-opacity="0.85" stroke="#1e3a8a" stroke-width="0.8"/>
+          <text x="537" y="274" text-anchor="middle" font-family="JetBrains Mono" font-size="6.5" font-weight="700" fill="#1e3a8a">VC GATE 1 (WEED)</text>
+          <!-- Page 4 Pink/Lime Ornamental Strip Beds -->
+          <rect x="478" y="246" width="42" height="7" fill="#d5b6ad" fill-opacity="0.65"/>
+          <rect x="556" y="240" width="44" height="7" fill="#c8d4b9" fill-opacity="0.75"/>
+          <rect x="718" y="226" width="60" height="8" fill="#d5b6ad" fill-opacity="0.65"/>
+        `;
+      }
+
+      // 3. Main Corridor Road Geometry + Perpendicular Branch Roads + Duck Pond Figure-8 Waterbody + Centenary Gate Roundabout
+      html += `
+        <!-- Main Corridor Carriageway (Bab-e-Syed to Duck Pond) -->
+        <path d="M 45 253 L 855 197 L 858 230 L 45 286 Z" fill="#929892" stroke="#79847b" stroke-width="1.3"/>
+        <line x1="50" y1="269" x2="852" y2="213" stroke="#8c9c68" stroke-width="1.5"/>
+
+        <!-- Perpendicular Branch Roads (Matching Pages 1, 4, 6, 7, 9, 11) -->
+        <!-- Bab-e-Syed East T-Junction (Pg 6) -->
+        <rect x="242" y="212" width="16" height="96" transform="rotate(-4 242 255)" fill="#929892"/>
+        <!-- Staff Club South & North Branches (Pg 9) -->
+        <rect x="328" y="268" width="18" height="46" transform="rotate(-4 328 268)" fill="#929892"/>
+        <rect x="358" y="198" width="15" height="52" transform="rotate(-4 358 198)" fill="#929892"/>
+        <rect x="448" y="202" width="20" height="96" transform="rotate(-4 448 245)" fill="#929892"/>
+        <!-- VC Lodge Major North Road & Zainul Abdin Road (Pg 1 & Pg 4) -->
+        <rect x="530" y="162" width="24" height="68" transform="rotate(-4 530 195)" fill="#929892"/>
+        <rect x="606" y="244" width="16" height="44" transform="rotate(-4 606 244)" fill="#929892"/>
+        <text x="614" y="298" text-anchor="middle" font-family="JetBrains Mono" font-size="6.5" fill="#374151">ZAINUL ABDIN RD</text>
+        <text x="748" y="176" text-anchor="middle" font-family="JetBrains Mono" font-size="6.5" fill="#374151">MAULANA AZAD LIBRARY PARK</text>
+        <text x="772" y="256" text-anchor="middle" font-family="JetBrains Mono" font-size="6.5" fill="#374151">MASS COMM. &amp; ART FACULTY</text>
+
+        <!-- Zone 5: Duck Pond Triangular Junction & Two-Lobed Pond with Central Bridge (Page 10) -->
+        <polygon points="852,197 952,132 958,242 855,230" fill="#929892" stroke="#79847b" stroke-width="1"/>
+        <!-- Rounded Triangular Park Island -->
+        <polygon points="868,212 942,152 944,224" fill="url(#GrassBuffer)" stroke="#526d5c" stroke-width="1.6" stroke-linejoin="round"/>
+        <!-- Two-Lobed (Figure-8) Blue Water Pond + Central Footbridge & Stepped East Terrace (Page 10) -->
+        <circle cx="912" cy="198" r="10.5" fill="#bae6fd" stroke="#7aa8b5" stroke-width="1.1"/>
+        <circle cx="925" cy="195" r="9.5" fill="#bae6fd" stroke="#7aa8b5" stroke-width="1.1"/>
+        <line x1="918" y1="186" x2="919" y2="208" stroke="#4f6d5a" stroke-width="3.2"/>
+        <rect x="930" y="182" width="9" height="10" fill="#cbd5e1" stroke="#64748b" stroke-width="0.7"/>
+
+        <!-- Zone 6: Centenary Gate Avenue & Entrance Roundabout Island (Page 8) -->
+        <polygon points="942,140 1082,42 1098,66 956,164" fill="#929892" stroke="#79847b" stroke-width="1.2"/>
+        <line x1="952" y1="150" x2="1082" y2="58" stroke="#8c9c68" stroke-width="1.3"/>
+        <!-- Side stubs on Centenary Gate stretch (Page 8) -->
+        <polygon points="998,102 986,84 996,78 1008,96" fill="#929892"/>
+        <polygon points="1024,84 1012,66 1022,60 1034,78" fill="#929892"/>
+        <polygon points="1044,102 1056,120 1048,126 1036,108" fill="#929892"/>
+        <!-- Circular Traffic Island at Centenary Gate Mouth (Page 8 Top Right) -->
+        <circle cx="1076" cy="62" r="6.5" fill="#648971" stroke="#ffffff" stroke-width="1"/>
+      `;
+
+      // 4. Sidewalk Continuity / Shade Gaps Overlay
+      if (state.layers.gaps) {
+        html += `
+          <!-- Gap 1: Bab-e-Syed North Verge Gap before T-junction (Page 6) -->
+          <rect x="198" y="226" width="40" height="10" rx="3" fill="#be8b79" fill-opacity="0.32" stroke="#b17468" stroke-width="1.1" stroke-dasharray="3,2"/>
+          <!-- Gap 2: VC Lodge Gate 1 South Opening (Page 4) -->
+          <rect x="512" y="256" width="38" height="10" rx="3" fill="#be8b79" fill-opacity="0.32" stroke="#b17468" stroke-width="1.1" stroke-dasharray="3,2"/>
+          <!-- Gap 3: Maulana Azad Library Shrub-Only Zone (Page 4) -->
+          <rect x="716" y="232" width="64" height="12" rx="3" fill="#be8b79" fill-opacity="0.35" stroke="#b17468" stroke-width="1.1" stroke-dasharray="3,2"/>
+          <text x="748" y="228" text-anchor="middle" font-family="JetBrains Mono" font-size="7" font-weight="700" fill="#be123c">SHADE GAP (SHRUB BED ONLY)</text>
+        `;
+      }
+
+      // Draw illustrative planting markers.
+      // 6. Render Individual Plotted Specimens (Canopy Trees, Star-Crowned Palms, Ornamental Shrubs)
+      visibleNodes.forEach(node => {
+        const isSelected = node.id === state.selectedNodeId;
+        const r = node.form === 'Canopy Tree' ? Math.max(5.5, node.crown * 0.85) : (node.form === 'Palm / Arborescent' ? 5.2 : 3.6);
+        let fill = '#547b5e';
+        let stroke = '#052e16';
+        if (node.form === 'Palm / Arborescent') {
+          fill = '#879f92';
+          stroke = '#115e59';
+        } else if (node.form === 'Shrub / Climber') {
+          fill = '#b18f8b';
+          stroke = '#831843';
+        } else if (node.crown >= 11.5) {
+          fill = '#73936f'; // Large mature yellow-green canopy crowns on Pages 8 & 9
+          stroke = '#14532d';
+        } else if (node.species === 'Terminalia arjuna') {
+          fill = '#648971';
+          stroke = '#134e4a';
+        }
+        if (node.status === 'Proposed Infill') {
+          fill = '#2563eb';
+          stroke = '#1e3a8a';
+        }
+
+        html += `
+          <g class="tree-node ${isSelected ? 'selected-node' : ''}" data-node-id="${node.id}">
+            <circle cx="${node.x}" cy="${node.y}" r="${r.toFixed(1)}"
+              fill="${fill}" fill-opacity="0.88" stroke="${stroke}" stroke-width="1.2" />
+            <circle cx="${node.x}" cy="${node.y}" r="1.3" fill="#ffffff" fill-opacity="0.85" />
+          </g>
+        `;
+      });
+
+      html += `</g>`;
+      scene.innerHTML = html;
+
+      scene.querySelectorAll('[data-node-id]').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectMapNode(el.getAttribute('data-node-id'));
+        });
+      });
+
+      scene.querySelectorAll('[data-stretch-click]').forEach(el => {
+        el.addEventListener('click', () => {
+          setActiveStretch(el.getAttribute('data-stretch-click'));
+        });
+      });
+
+      updateStretchProfileCard();
+    }
+
+    function selectMapNode(nodeId) {
+      const node = state.mapNodes.find(n => n.id === nodeId);
+      if (!node) return;
+      state.selectedNodeId = nodeId;
+      document.getElementById('nodeInspectorTitle').textContent = `Symbol #${node.id}`;
+      const cap = document.getElementById('selectedMarkerCaption');
+      if (cap) cap.textContent = `${node.id}: ${node.species}. Illustrative marker only.`;
+      document.getElementById('nodeInspectorBadge').textContent = node.form;
+      document.getElementById('nodeSpeciesSelect').value = node.species;
+      document.getElementById('nodeContextSelect').value = node.context;
+      document.getElementById('nodeCrownInput').value = node.crown;
+      document.getElementById('nodeStatusSelect').value = node.status;
+      renderCorridorSvg();
+    }
+
+    function setActiveStretch(stretchId) {
+      state.activeStretch = stretchId;
+      document.querySelectorAll('#stretchSelectorGroup .stretch-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-stretch') === stretchId);
+      });
+      renderCorridorSvg();
+    }
+
+    // =========================================================================
+    // Exploratory biodiversity and tree-density metrics
+    // =========================================================================
+    let abundanceChartInstance = null;
+    let stretchChartInstance = null;
+
+    function computeEcologicalMetrics() {
+      const lengths = state.segmentLengths;
+      const totalLength = lengths.s1 + lengths.s2 + lengths.s3 + lengths.s4 + lengths.s5;
+
+      const activeSpecies = state.speciesTally.filter(sp => {
+        if (state.strictTreeOnly && sp.form !== 'Canopy Tree') return false;
+        return true;
+      });
+
+      const segTotals = { s1: 0, s2: 0, s3: 0, s4: 0, s5: 0 };
+      const segCrownSum = { s1: 0, s2: 0, s3: 0, s4: 0, s5: 0 };
+      let grandTotal = 0;
+      let totalCpaM2 = 0;
+
+      const speciesTotals = activeSpecies.map(sp => {
+        const sum = (Number(sp.s1) || 0) + (Number(sp.s2) || 0) + (Number(sp.s3) || 0) + (Number(sp.s4) || 0) + (Number(sp.s5) || 0);
+        const singleCrownArea = Math.PI * Math.pow(sp.crown / 2, 2);
+        totalCpaM2 += sum * singleCrownArea;
+        ['s1', 's2', 's3', 's4', 's5'].forEach(k => {
+          const count = Number(sp[k]) || 0;
+          segTotals[k] += count;
+          segCrownSum[k] += count * sp.crown * 0.42;
+        });
+        grandTotal += sum;
+        return { ...sp, total: sum, cpa: sum * singleCrownArea };
+      });
+
+      const presentSpecies = speciesTotals.filter(s => s.total > 0);
+      const S = presentSpecies.length;
+      const N = Math.max(1, grandTotal);
+      let shannonH = 0;
+      let sumPiLn2 = 0;
+      let simpsonD = 0;
+      let maxCount = 0;
+
+      presentSpecies.forEach(s => {
+        if (s.total > maxCount) maxCount = s.total;
+        const p = s.total / N;
+        if (p > 0) {
+          const lnP = Math.log(p);
+          shannonH -= p * lnP;
+          sumPiLn2 += p * lnP * lnP;
+          simpsonD += p * p;
+        }
+      });
+
+      // Hutcheson's (1970) analytical variance of Shannon H'
+      const evennessJ = S > 1 ? shannonH / Math.log(S) : 0;
+      const simpsonIndex = 1 - simpsonD;
+      const margalefD = N > 1 ? (S - 1) / Math.log(N) : 0;
+      const bergerParker = grandTotal > 0 ? (maxCount / N) * 100 : 0;
+
+      const overallDensity = totalLength > 0 ? (grandTotal / totalLength) * 100 : 0;
+      // No measured canopy coverage or sidewalk shade inference is generated.
+
+      // Update Top KPI Ribbon
+      document.getElementById('kpiTotalTrees').textContent = grandTotal;
+      document.getElementById('kpiTreeFilterSub').textContent = state.strictTreeOnly ? 'Tree-form tally, editable' : 'Tree and palm tally, editable';
+      document.getElementById('kpiDensity').textContent = overallDensity.toFixed(1);
+      document.getElementById('kpiCpaTotal').textContent = `Assumed corridor length: ${totalLength.toLocaleString()} m`;
+      document.getElementById('kpiShannon').textContent = shannonH.toFixed(2);
+      document.getElementById('kpiRichnessBadge').textContent = `S = ${S} taxa with positive counts`;
+      const countedTaxa = document.getElementById('taxCountedTreeTaxa');
+      if (countedTaxa) countedTaxa.textContent = `${S} taxa`;
+      document.getElementById('kpiEvennessSub').textContent = `Largest species share · working tally`;
+      document.getElementById('kpiBergerParker').textContent = bergerParker.toFixed(1);
+
+      ['s1', 's2', 's3', 's4', 's5'].forEach(k => {
+        const d = lengths[k] > 0 ? (segTotals[k] / lengths[k]) * 100 : 0;
+        const el = document.getElementById(`segSummary_${k}`);
+        if (el) el.textContent = `${segTotals[k]} stems · ${d.toFixed(1)}/100m`;
+      });
+
+      const sorted = [...presentSpecies].sort((a, b) => b.total - a.total);
+      const top3 = sorted.slice(0, 3).map(s => `${s.sci} (${((s.total / N) * 100).toFixed(1)}%)`).join(', ');
+      return {
+        grandTotal,
+        totalLength,
+        totalCpaM2,
+        overallDensity,
+        shannonH,
+        evennessJ,
+        simpsonIndex,
+        margalefD,
+        bergerParker,
+        S,
+        segTotals,
+        segCrownSum,
+        speciesTotals
+      };
+    }
+
+    function updateStretchProfileCard() {
+      const metrics = computeEcologicalMetrics();
+      const st = state.activeStretch;
+      if (st === 'all') {
+        document.getElementById('stretchStatTrees').textContent = `${metrics.grandTotal} stems`;
+        document.getElementById('stretchStatDensity').textContent = `${metrics.overallDensity.toFixed(1)} / 100m`;
+        const leaders = [...metrics.speciesTotals].sort((a,b)=>b.total-a.total).filter(x=>x.total>0).slice(0,2);
+        document.getElementById('stretchStatDom').textContent = leaders.map(x=>x.sci.split(' ')[0][0]+'. '+x.sci.split(' ')[1]).join(', ');
+        document.getElementById('stretchStatCont').textContent = `≈ ${Math.round(metrics.totalCpaM2).toLocaleString()} m²`;
+      } else {
+        const key = st === 's6' ? 's5' : st;
+        const count = metrics.segTotals[key] || 0;
+        const len = state.segmentLengths[key] || 220;
+        const dens = (count / len) * 100;
+        const leaders = [...metrics.speciesTotals].sort((a,b)=>(Number(b[key])||0)-(Number(a[key])||0)).filter(x=>Number(x[key])>0).slice(0,2);
+        document.getElementById('stretchStatDom').textContent = leaders.map(x=>x.sci.split(' ')[0][0]+'. '+x.sci.split(' ')[1]).join(', ') || 'No counted taxa';
+        document.getElementById('stretchStatTrees').textContent = `${count} stems`;
+        document.getElementById('stretchStatDensity').textContent = `${dens.toFixed(1)} / 100m`;
+        const crownArea = metrics.speciesTotals.reduce((sum, sp) => sum + (Number(sp[key]) || 0) * Math.PI * Math.pow(sp.crown / 2, 2), 0);
+        document.getElementById('stretchStatCont').textContent = `≈ ${Math.round(crownArea).toLocaleString()} m²`; 
+      }
+    }
+
+    function renderTallyMatrix() {
+      const tbody = document.getElementById('tallyMatrixBody');
+      const metrics = computeEcologicalMetrics();
+      const grand = Math.max(1, metrics.grandTotal);
+
+      let html = '';
+      state.speciesTally.forEach((sp, idx) => {
+        const excluded = state.strictTreeOnly && sp.form !== 'Canopy Tree';
+        const rowTotal = (Number(sp.s1)||0) + (Number(sp.s2)||0) + (Number(sp.s3)||0) + (Number(sp.s4)||0) + (Number(sp.s5)||0);
+        const relPct = excluded ? 0 : (rowTotal / grand) * 100;
+
+        html += `
+          <tr class="${excluded ? 'bg-sand-50/70 opacity-60' : 'hover:bg-sand-50/60'}">
+            <td class="py-2 px-3">
+              <div class="font-semibold text-forest-950 italic">${sp.sci}</div>
+              <div class="text-[11px] text-slate-500">${sp.common}</div>
+            </td>
+            <td class="py-2 px-2 text-center font-mono">${sp.crown.toFixed(1)}</td>
+            ${['s1', 's2', 's3', 's4', 's5'].map(seg => `
+              <td class="py-1.5 px-1.5 text-center">
+                <input type="number" min="0" max="200" value="${sp[seg]}"
+                  data-row-idx="${idx}" data-seg="${seg}"
+                  class="tally-cell-input w-12 text-center rounded border border-sand-300 bg-white py-1 text-xs font-mono font-semibold text-forest-950 focus:outline-none focus:border-forest-700" />
+              </td>
+            `).join('')}
+            <td class="py-2 px-3 text-right font-mono font-bold text-forest-950">${rowTotal}</td>
+            <td class="py-2 px-3 text-right font-mono text-emerald-800">${excluded ? 'Excl.' : relPct.toFixed(1) + '%'}</td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = html;
+
+      tbody.querySelectorAll('.tally-cell-input').forEach(inp => {
+        inp.addEventListener('change', () => {
+          const rIdx = Number(inp.getAttribute('data-row-idx'));
+          const seg = inp.getAttribute('data-seg');
+          state.speciesTally[rIdx][seg] = Math.max(0, Number(inp.value) || 0);
+          renderTallyMatrix();
+          renderTaxonomyTable();
+          updateCharts();
+          updateStretchProfileCard();
+        });
+      });
+    }
+
+
+    function drawFallbackBars(canvas, labels, values, horizontal = true) {
+      if (!canvas) return;
+      const width = Math.max(330, Math.round(canvas.getBoundingClientRect().width || 380));
+      const height = Math.max(230, Math.round(canvas.parentElement.getBoundingClientRect().height || 240));
+      const ratio = window.devicePixelRatio || 1;
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      const c = canvas.getContext('2d');
+      if (!c) return;
+      c.setTransform(ratio, 0, 0, ratio, 0, 0);
+      c.clearRect(0, 0, width, height);
+      const max = Math.max(1, ...values);
+      const row = (height - 10) / Math.max(1, values.length);
+      c.font = '11px system-ui, sans-serif';
+      c.textBaseline = 'middle';
+      if (horizontal) {
+        const left = 116, usable = Math.max(95, width - left - 42);
+        values.forEach((v, i) => {
+          const y = 6 + i * row;
+          c.fillStyle = '#475569'; c.textAlign = 'left'; c.fillText(labels[i], 4, y + row * .45);
+          c.fillStyle = '#e5e7eb'; c.fillRect(left, y + row * .2, usable, row * .54);
+          c.fillStyle = '#526d5c'; c.fillRect(left, y + row * .2, usable * v / max, row * .54);
+          c.fillStyle = '#143628'; c.fillText(String(v), Math.min(width - 28, left + usable * v / max + 5), y + row * .45);
+        });
+      } else {
+        const pad = 48, bw = (width - 12) / Math.max(1, values.length);
+        values.forEach((v, i) => {
+          const bh = (height - pad - 25) * v / max, x = 6 + i * bw, y = height - pad - bh;
+          c.fillStyle = '#526d5c'; c.fillRect(x + 8, y, Math.max(8, bw - 19), bh);
+          c.fillStyle = '#143628'; c.textAlign = 'center'; c.fillText(v.toFixed(1), x + bw / 2, Math.max(8, y - 8));
+          c.fillStyle = '#64748b'; c.font = '10px system-ui';
+          c.fillText(labels[i], x + bw / 2, height - pad + 14);
+          c.font = '11px system-ui';
+        });
+      }
+      c.textAlign = 'left';
+    }
+
+    function updateCharts() {
+      const metrics = computeEcologicalMetrics();
+      const sorted = [...metrics.speciesTotals].filter(s => s.total > 0).sort((a, b) => b.total - a.total).slice(0, 8);
+
+      if (!window.Chart) {
+        drawFallbackBars(document.getElementById('chartSpeciesAbundance'), sorted.map(s => s.sci.split(' ')[0][0] + '. ' + s.sci.split(' ')[1]), sorted.map(s => s.total));
+        const keys = ['s1','s2','s3','s4','s5'];
+        drawFallbackBars(document.getElementById('chartStretchMetrics'), ['Bab-e-Syed','Staff Club','VC Lodge','Library','Pond / Gate'], keys.map(k => Number((metrics.segTotals[k] / state.segmentLengths[k] * 100).toFixed(1))), false);
+      }
+      const ctx1 = document.getElementById('chartSpeciesAbundance');
+      if (ctx1 && window.Chart) {
+        if (abundanceChartInstance) abundanceChartInstance.destroy();
+        abundanceChartInstance = new Chart(ctx1, {
+          type: 'bar',
+          data: {
+            labels: sorted.map(s => s.sci.split(' ')[0][0] + '. ' + s.sci.split(' ')[1]),
+            datasets: [{
+              label: 'Stem Count (n)',
+              data: sorted.map(s => s.total),
+              backgroundColor: '#526d5c',
+              borderRadius: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { color: '#e2e5df' }, ticks: { font: { family: 'JetBrains Mono', size: 10 } } },
+              y: { grid: { display: false }, ticks: { font: { family: 'Inter', size: 11, style: 'italic' } } }
+            }
+          }
+        });
+      }
+
+      const ctx2 = document.getElementById('chartStretchMetrics');
+      if (ctx2 && window.Chart) {
+        if (stretchChartInstance) stretchChartInstance.destroy();
+        const segKeys = ['s1', 's2', 's3', 's4', 's5'];
+        const segNames = ['S1: Bab-e-Syed', 'S2: Staff Club', 'S3: VC Lodge', 'S4: Library', 'S5-6: Pond/Gate'];
+        const densities = segKeys.map(k => Number(((metrics.segTotals[k] / state.segmentLengths[k]) * 100).toFixed(1)));
+
+        stretchChartInstance = new Chart(ctx2, {
+          type: 'bar',
+          data: {
+            labels: segNames,
+            datasets: [
+              { label: 'Stems per 100 m', data: densities, backgroundColor: '#526d5c', borderRadius: 1 }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 10 } } } },
+            scales: {
+              y: { grid: { color: '#e2e5df' }, ticks: { font: { family: 'JetBrains Mono', size: 10 } } },
+              x: { grid: { display: false }, ticks: { font: { family: 'Inter', size: 10 } } }
+            }
+          }
+        });
+      }
+
+    }
+
+    function renderTaxonomyTable() {
+      const tbody = document.getElementById('taxonomyTableBody');
+      const formFilter = document.getElementById('taxFilterLifeForm').value;
+      const statusFilter = document.getElementById('taxFilterStatus').value;
+      const query = document.getElementById('taxSearchInput').value.trim().toLowerCase();
+
+      const filtered = RAW_CAD_SCHEDULE.filter(item => {
+        if (formFilter !== 'all' && item.form !== formFilter) return false;
+        if (statusFilter !== 'all' && item.status !== statusFilter) return false;
+        if (query) {
+          const hay = `${item.raw} ${item.sci} ${item.common} ${item.form}`.toLowerCase();
+          if (!hay.includes(query)) return false;
+        }
+        return true;
+      });
+
+      let html = '';
+      filtered.forEach(row => {
+        let badgeClass = 'bg-emerald-100 text-emerald-900';
+        if (row.status === 'Merged Duplicate') badgeClass = 'bg-amber-100 text-amber-900';
+        if (row.status === 'Separated Non-Tree') badgeClass = 'bg-sky-100 text-sky-900';
+        if (row.status === 'Excluded Artifact') badgeClass = 'bg-rose-100 text-rose-900';
+
+        html += `
+          <tr class="hover:bg-sand-50/80">
+            <td class="py-2 px-3 font-mono font-semibold text-slate-500">${row.sno}</td>
+            <td class="py-2 px-3 font-mono font-medium text-forest-950">${row.raw}</td>
+            <td class="py-2 px-3 italic font-medium text-forest-900">${row.sci}</td>
+            <td class="py-2 px-3 text-slate-600">${row.common}</td>
+            <td class="py-2 px-3 font-medium text-slate-700">${row.form}</td>
+            <td class="py-2 px-3"><span class="px-2 py-0.5 rounded-full text-[11px] font-medium ${badgeClass}">${row.status}</span></td>
+            <td class="py-2 px-3 text-right font-mono font-semibold">${row.status === 'Merged Duplicate' ? 'Merged' : (row.form === 'Canopy Tree' || row.form === 'Palm / Arborescent') ? (() => { const sp = state.speciesTally.find(s => row.sci.startsWith(s.sci)); return sp ? ['s1','s2','s3','s4','s5'].reduce((a,k)=>a+(Number(sp[k])||0),0) : 'n/a'; })() : 'n/a'}</td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = html || `<tr><td colspan="7" class="py-6 text-center text-slate-500">No schedule entries match your current filter.</td></tr>`;
+    }
+
+    // =========================================================================
+    // Export editable working tally.
+    function downloadFile(filename, content, mime) {
+      const blob = new Blob([content], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initMapNodes();
+      loadSavedState();
+      renderCorridorSvg();
+      renderTaxonomyTable();
+      renderTallyMatrix();
+      updateCharts();
+
+      // Main Navigation Tabs
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-tab');
+          state.activeTab = target;
+          document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+          document.querySelectorAll('.tab-panel').forEach(panel => {
+            panel.classList.toggle('hidden', panel.id !== `tab-${target}`);
+          });
+          if (target === 'calculator') {
+            setTimeout(updateCharts, 60);
+          }
+        });
+      });
+
+      // Stretch Selector Pills
+      document.querySelectorAll('#stretchSelectorGroup .stretch-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          setActiveStretch(btn.getAttribute('data-stretch'));
+        });
+      });
+
+      // Diagrammatic map layer checkboxes
+      const bindLayer = (id, key) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('change', () => {
+            state.layers[key] = el.checked;
+            renderCorridorSvg();
+          });
+        }
+      };
+      bindLayer('layerCanopy', 'canopy');
+      bindLayer('layerPalm', 'palm');
+      bindLayer('layerShrub', 'shrub');
+      bindLayer('layerGaps', 'gaps');
+      bindLayer('layerDrainage', 'drainage');
+
+      document.getElementById('taxFilterLifeForm').addEventListener('change', renderTaxonomyTable);
+      document.getElementById('taxFilterStatus').addEventListener('change', renderTaxonomyTable);
+      document.getElementById('taxSearchInput').addEventListener('input', renderTaxonomyTable);
+
+      document.getElementById('btnToggleStrictAudit').addEventListener('click', () => {
+        state.strictTreeOnly = !state.strictTreeOnly;
+        document.getElementById('auditToggleText').textContent = state.strictTreeOnly
+          ? 'Tree taxa only'
+          : 'Trees and palms';
+        document.getElementById('auditToggleIndicator').className = state.strictTreeOnly
+          ? 'w-2.5 h-2.5 rounded-full bg-emerald-400'
+          : 'w-2.5 h-2.5 rounded-full bg-amber-400';
+        renderTallyMatrix();
+        updateCharts();
+        showToast(state.strictTreeOnly ? 'Switched to strict canopy/understory tree diversity' : 'Included Roystonea regia palms in diversity index');
+      });
+
+      document.querySelectorAll('.seg-length-input').forEach(inp => {
+        inp.addEventListener('input', () => {
+          const seg = inp.getAttribute('data-seglen');
+          state.segmentLengths[seg] = Math.max(20, Number(inp.value) || 200);
+          computeEcologicalMetrics();
+          updateCharts();
+        });
+      });
+
+      document.getElementById('btnResetBaseline').addEventListener('click', () => {
+        state.speciesTally = JSON.parse(JSON.stringify(DEFAULT_SPECIES_TALLY));
+        state.segmentLengths = { s1: 220, s2: 210, s3: 280, s4: 240, s5: 230 };
+        document.querySelectorAll('.seg-length-input').forEach(inp => {
+          const seg = inp.getAttribute('data-seglen');
+          inp.value = state.segmentLengths[seg];
+        });
+        renderTallyMatrix();
+        updateCharts();
+        showToast('Restored the working inventory counts');
+      });
+
+      document.getElementById('btnSaveTallyLocal').addEventListener('click', () => {
+        try {
+          localStorage.setItem('amu_corridor_observatory_v1', JSON.stringify({
+            speciesTally: state.speciesTally,
+            segmentLengths: state.segmentLengths
+          }));
+          showToast('Saved corridor tally to browser storage');
+        } catch (err) {
+          showToast('State updated in active session memory');
+        }
+      });
+
+      document.getElementById('btnExportAllJson').addEventListener('click', () => {
+        const metrics = computeEcologicalMetrics();
+        const payload = {
+          project: 'Beyond Green Cover: AMU Corridor Study',
+          datasetStatus: 'Exploratory working counts and schematic map; not independently field verified',
+          author: 'Saud Ahmad',
+          corridor: 'Bab-e-Syed to Centenary Gate, Aligarh Muslim University',
+          segmentLengthsMeters: state.segmentLengths,
+          summaryIndicators: {
+            totalWorkingStems: metrics.grandTotal,
+            totalCrownProjectionAreaM2: Math.round(metrics.totalCpaM2),
+            speciesRichness: metrics.S,
+            margalefRichnessD: Number(metrics.margalefD.toFixed(4)),
+            shannonDiversityH: Number(metrics.shannonH.toFixed(4)),
+            pielouEvennessJ: Number(metrics.evennessJ.toFixed(4)),
+            simpsonDiversity1D: Number(metrics.simpsonIndex.toFixed(4)),
+            bergerParkerDominancePct: Number(metrics.bergerParker.toFixed(2)),
+            linearDensityPer100m: Number(metrics.overallDensity.toFixed(2))
+          },
+          speciesTallyByStretch: state.speciesTally,
+          reconciledScheduleAudit: RAW_CAD_SCHEDULE
+        };
+        downloadFile('amu_corridor_inventory_dataset.json', JSON.stringify(payload, null, 2), 'application/json');
+        showToast('Saved working data as JSON');
+      });
+
+      document.getElementById('btnExportCsv').addEventListener('click', () => {
+        const headers = ['Scientific_Name', 'Common_Name', 'Family', 'Life_Form', 'Phenology', 'Mean_Crown_m', 'S1_Bab_e_Syed', 'S2_Staff_Club', 'S3_VC_Lodge', 'S4_Library', 'S5_6_Duck_Pond_Centenary', 'Total_Stems'];
+        const rows = state.speciesTally.map(sp => {
+          const tot = (Number(sp.s1)||0) + (Number(sp.s2)||0) + (Number(sp.s3)||0) + (Number(sp.s4)||0) + (Number(sp.s5)||0);
+          return `"${sp.sci}","${sp.common}","${sp.family}","${sp.form}","${sp.phenology}",${sp.crown},${sp.s1},${sp.s2},${sp.s3},${sp.s4},${sp.s5},${tot}`;
+        });
+        downloadFile('amu_corridor_species_inventory.csv', [headers.join(','), ...rows].join('\n'), 'text/csv');
+        showToast('Saved working tally as CSV');
+      });
+
+    });
+  </script>
+<div hidden="" id="private-illustrative-node-fields">
+<span id="nodeInspectorTitle"></span><span id="nodeInspectorBadge"></span>
+<select id="nodeSpeciesSelect"><option value="Azadirachta indica">Azadirachta indica</option></select>
+<select id="nodeContextSelect"><option value="Roadside Verge">Roadside Verge</option></select>
+<input id="nodeCrownInput" type="text"/><select id="nodeStatusSelect"><option value="Illustrative marker">Illustrative marker</option></select>
+</div></body>
+</html>
